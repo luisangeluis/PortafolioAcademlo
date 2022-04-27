@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-family: 'Montserrat', sans-serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.contenedor{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body{
+    background-color: #242635;
+}
+
+.span-inline-block{
+    display: inline-block;
+    width: 100%;
+}
+
+.main-title{
+    font-size: 100px;
+    font-weight:semibold;
+    /* font-weight: semibold; */
+}
+
+.main-subtitle{
+    font-size: 50px;
+
+}
+
+.subsection-title{
+   font-size: 45px;
+}
+.color-aqua{
+    color:#34b0bE;
+}
+
+/*Main nav*/
+.main_header .contenedor{
+    margin: 1rem auto;
+    min-height: 50px;
+    padding: 1rem;
+}
+.main-nav_list{
+    display: flex;
+    justify-content:flex-end;
+    color: #ffffff;
+}
+
+.main-nav_list li{
+    padding: .5rem 1.5rem;
+}
+
+/*Jumbotron*/
+.jumbotron .contenedor{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    /* justify-items:center; */
+    align-items: center;
+    min-height: 50vh;
+
+}
+.jumbotron_section-title{
+    /* justify-self:end;*/
+    align-self:start; 
+    /* margin-right: -100px; */
+}
+.jumbotron_title-left{
+    margin-right: -100px;
+
+}
+
+.jumbotron_section-image{
+    justify-self: stretch;
+    align-self: stretch;
+    background-color: lightblue;
+    opacity: .1;
+    border-radius: 100%;
+    min-width: 250px;
+
+    
+}
+.jumbotron-photo{
+    justify-self: start;
+    align-self: start;
+
+    display: block;
+    height: 100%;
+    width: 100%;
+    min-width:300px;
+    min-height:100%;
+    border-radius: 50%;    
+    /* text-align: center; */
+    z-index: 1;
+}
+
+/*Empresas*/
+.empresas .contenedor{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    align-items: stretch;
+    min-height: 200px;
+}
+.empresas_item{
+    align-self: center;
+}
+
+@media(max-width:850px){
+    .main-title{
+        font-size: 50px;
+        font-weight:semibold;
+        /* font-weight: semibold; */
+    }
+    
+    .main-subtitle{
+        font-size: 32px;
+    
+    }
+    
+    .subsection-title{
+       font-size: 18px;
+    }
+}
+
+
+
+
