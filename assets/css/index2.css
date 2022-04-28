@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: #242635;
+}
+.contenedor{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.color-aqua{
+    color: #34b0be;
+}
+
+/*************Navegacion*/
+.main-header{
+    min-height: 5rem;
+    padding: .5rem 1rem;
+    
+    
+}
+
+.main-nav{
+    min-height: 4rem;
+    padding: .5rem .1rem;
+    /* background-color: lightcoral; */
+}
+
+.main-menu{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    /* gap: 5px; */
+    color: #ffffff;
+    
+
+}
+
+.menu-item{
+    margin: .5rem .5rem;
+    padding: .5rem 1rem;
+    white-space: nowrap;
+
+}
+
+/*************Jumbotron*/
+
+.jumbotron .contenedor{
+    display: flex;
+    justify-content: center;
+    
+}
+.jumbotron_section-left,.jumbotron_section-right{
+    /* width: 100%; */
+    /* display: flex; */
+    /* width: 100%; */
+}
+.jumbotron_section-photo{
+    background-color: #ffffff;
+    border-radius: 100%;
+    opacity: .1;
+    /* max-width: 100%; */
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    display: grid;
+    /* justify-items: center;
+    align-items: center; */
+    
+}
+
+.perfil-image{
+    /* max-width: 400px; */
+    max-width: 80%;
+
+    justify-self: center;
+    align-self: stretch;
+    padding: 3rem;
+    
+    
+}
+/*************querys*/
+@media(max-width:1050px){
+    .menu-item{
+        margin: .5rem .1rem;
+        padding: .5rem .5rem;
+        white-space: nowrap;
+    
+    }
+}
+
+@media(max-width:850px){
+    .jumbotron .contenedor{
+        flex-direction: column;
+        align-items:flex-start;
+        justify-content: center;
+        
+    }
+    .jumbotron_section-photo{
+        width: 350px;
+        height: 350px;
+        text-align: center;
+        display: grid;
+       
+        
+    }
+    
+    .perfil-image{
+        /* max-width: 400px; */
+        max-width: 80%;
+    
+        justify-self: center;
+        align-self: stretch;
+        padding: 3rem;
+        
+        
+    }
+}
