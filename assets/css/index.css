@@ -1,139 +1,195 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-:root{
+
+:root {
     font-family: 'Montserrat', sans-serif;
 }
-li{
+
+li {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
 }
-.contenedor{
+
+.contenedor {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
 
-body{
+body {
     background-color: #242635;
 }
 
-.span-inline-block{
+.span-inline-block {
     display: inline-block;
     width: 100%;
 }
 
-.main-title{
+.main-title {
     font-size: 100px;
-    font-weight:semibold;
+    font-weight: bolder;
     /* font-weight: semibold; */
 }
 
-.main-subtitle{
+.main-subtitle {
     font-size: 50px;
+    margin: .3rem .8rem;
+    padding: .5rem 1rem;
 
 }
 
-.subsection-title{
-   font-size: 45px;
+.subsection-title {
+    font-size: 45px;
 }
-.color-aqua{
-    color:#34b0bE;
+
+.color-aqua {
+    color: #34b0bE;
 }
 
 /*Main nav*/
-.main_header .contenedor{
+.main_header .contenedor {
     margin: 1rem auto;
     min-height: 50px;
     padding: 1rem;
 }
-.main-nav_list{
+
+.main-nav_list {
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     color: #ffffff;
 }
 
-.main-nav_list li{
+.main-nav_list li {
     padding: .5rem 1.5rem;
+    white-space: nowrap;
 }
 
 /*Jumbotron*/
-.jumbotron .contenedor{
+.jumbotron .contenedor {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 1fr 2fr 1fr;
     gap: 1rem;
-    /* justify-items:center; */
+    justify-items: center;
     align-items: center;
-    min-height: 50vh;
+    padding: .5rem 1rem;
+    min-height: 70vh;
 
 }
-.jumbotron_section-title{
+
+.jumbotron_section-left,
+.jumbotron_section-right {
     /* justify-self:end;*/
-    align-self:start; 
+    /* align-self:start;  */
     /* margin-right: -100px; */
+    /* margin-right: -100px; */
+    /* position: relative; */
+    padding: .5rem;
 }
-.jumbotron_title-left{
-    margin-right: -100px;
+
+.jumbotron_section-left {
+    justify-self: end;
+    align-self: flex-start;
+    /* right: -10rem; */
+    margin-right: -10rem;
+}
+
+.jumbotron_section-right {
+    justify-self: flex-start;
+    align-self: flex-start;
+    left: -10rem;
+    /* min-width: 50%; */
+    margin-left: -10rem;
+
+
 
 }
 
-.jumbotron_section-image{
-    justify-self: stretch;
-    align-self: stretch;
-    background-color: lightblue;
-    opacity: .1;
+.jumbotron_section-image {
+    justify-self: center;
+    align-self: center;
     border-radius: 100%;
-    min-width: 250px;
+    background-color: #ffffff;
+    opacity: .1;
+    width: 500px;
+    height: 500px;
+    /* max-width: 100%; */
 
-    
 }
-.jumbotron-photo{
-    justify-self: start;
-    align-self: start;
 
-    display: block;
-    height: 100%;
-    width: 100%;
-    min-width:300px;
-    min-height:100%;
-    border-radius: 50%;    
-    /* text-align: center; */
-    z-index: 1;
+.jumbotron-photo {
+    max-width: 80%;
+
 }
 
 /*Empresas*/
-.empresas .contenedor{
+.empresas .contenedor {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     align-items: stretch;
     min-height: 200px;
 }
-.empresas_item{
+
+.empresas_item {
     align-self: center;
 }
 
-@media(max-width:850px){
-    .main-title{
-        font-size: 50px;
-        font-weight:semibold;
-        /* font-weight: semibold; */
+@media(max-width:1100px) {
+
+    /*Main nav*/
+    .main-nav_list li {
+        padding: .5rem 1.2rem;
     }
     
-    .main-subtitle{
-        font-size: 32px;
-    
+    /*Jumbotron*/
+    .jumbotron_section-image {
+        justify-self: center;
+        align-self: center;
+        border-radius: 100%;
+        background-color: #ffffff;
+        opacity: .1;
+        width: 450px;
+        height: 450px;
+
     }
-    
-    .subsection-title{
-       font-size: 18px;
+
+    .jumbotron_section-left {
+
+        margin-right: -8rem;
     }
+
+    .jumbotron_section-right {
+        margin-left: -8rem;
+    }
+
 }
 
+@media(max-width:850px) {
+    .main-title {
+        font-size: 50px;
+        font-weight: semibold;
+    }
+
+    .main-subtitle {
+        font-size: 32px;
+
+    }
+
+    .jumbotron_section-left {
+
+        margin-right: -6rem;
+    }
+
+    .jumbotron_section-right {
+
+        margin-left: -6rem;
+    }
 
 
-
+}
