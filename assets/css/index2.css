@@ -126,6 +126,10 @@ body{
     padding: 3rem;
     
 }
+
+.jumbotron_hr{
+    max-width: 50%;
+}
 /*************querys*************/
 
 @media(max-width:1250px){
@@ -226,6 +230,7 @@ body{
         justify-content: center;
         align-items: center;
         min-height: 50vh;
+        padding: .5rem;
     }
     .jumbotron_section-left,
     .jumbotron_section-right{
@@ -235,19 +240,28 @@ body{
     }
     .jumbotron_section-left{
         left: 0;
+        order: 1;
+        text-align: center;
+        margin-top: -3rem;
+
 
     } 
     .jumbotron_section-right{
         right: 0;
-
-    
+        order:-1;
+        margin-bottom: -3rem;
+        text-align: center;
     }
 
     .jumbotron_section-photo{
         width: 300px;
         height: 300px;
+        /* order: -1; */
         
-        
+    }
+
+    .jumbotron_hr{
+        max-width: 100%;
     }
 
     
