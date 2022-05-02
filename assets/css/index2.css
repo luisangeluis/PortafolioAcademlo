@@ -39,10 +39,23 @@ body{
     color: #ffffff;
 }
 .subsection_title{
+    margin: .5rem;
+    padding: .5rem;
     font-size: 45px; 
     font-weight: normal;
 }
 
+.card{
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 7rem;
+}
+
+.card-image{
+    
+}
 /*************Navegacion*/
 .main-header{
     min-height: 5rem;
@@ -79,16 +92,21 @@ body{
 }
 
 
-/*************Jumbotron*/
-
+/*************Jumbotron**************/
+.jumbotron{
+    margin: 1rem;
+    min-height: 70vh;
+    display: flex;
+}
 .jumbotron .contenedor{
     
     display: flex;
     justify-content: center;
     
-    min-height: 70vh;
-    /* margin: 1rem 0; */
+    min-height: 50vh;
     padding: 1rem;
+    
+    align-self: center;
     
 }
 .jumbotron_section-left,.jumbotron_section-right{
@@ -107,10 +125,28 @@ body{
     right: 5%;
 
 }
-.jumbotron_section-photo{
-    background-color: #ffffff;
+.jumbutron_social-media{
+    display: flex;
+    /* padding: .5rem; */
+    justify-content: flex-start;
+    align-items: center;
+
+    
+}
+.jumbutron_social-media .item_social-media{
+    /* background-color: red; */
+    align-self: center;
+    margin: .1rem .5rem;
+    padding: .5rem;
+
+    background-color: #D1CECA;
+    /* opacity: .1; */
     border-radius: 100%;
-    opacity: .1;
+} 
+.jumbotron_section-photo{
+    background-color: gray;
+    border-radius: 100%;
+    /* opacity: .1; */
     width: 500px;
     height: 500px;
     text-align: center;
@@ -130,6 +166,72 @@ body{
 .jumbotron_hr{
     max-width: 50%;
 }
+
+/*************Empresas*************/
+.empresas .contenedor{
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    margin:1rem auto;
+    margin-top: -7%;
+    padding: 1rem;
+    width: 60%;
+    background-color: gray;
+    border-radius: 5px;
+}
+.empresas-item{
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #D1CECA;
+    border-radius: 5px;
+    width: 10rem;
+    text-align: center;
+
+
+}
+
+.empresas-item img{
+    width: 5rem;
+    max-width: 100%;
+
+}
+
+/*************About me*************/
+.about-me .contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+    min-height: 50vh;
+    padding: 1rem;
+    text-align: center;
+}
+.about-me .subsection_title{
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.about-me_text{
+    width: 70%;
+}
+
+/************* Services*************/
+.services .contenedor{
+    width: 60%;
+}
+.services-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.services-item{
+    margin: 1rem;
+
+}
+
 /*************querys*************/
 
 @media(max-width:1250px){
@@ -225,6 +327,9 @@ body{
 }
 
 @media(max-width:600px){
+    .jumbotron{
+        min-height: 50vh;
+    }
     .jumbotron .contenedor{
         flex-direction: column;
         justify-content: center;
