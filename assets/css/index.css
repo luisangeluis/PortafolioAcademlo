@@ -76,7 +76,7 @@ body {
     white-space: nowrap;
 }
 
-/*Jumbotron*/
+/*************Jumbotron************/
 .jumbotron .contenedor {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -127,8 +127,8 @@ body {
     justify-self: center;
     align-self: center;
     border-radius: 100%;
-    background-color: #ffffff;
-    opacity: .1;
+    background-color: #353745;
+    /* opacity: .1; */
     width: 500px;
     height: 500px;
     /* max-width: 100%; */
@@ -143,17 +143,32 @@ body {
     max-width: 90%;
 }
 
-/*Empresas*/
+/*************Empresas************/
 .empresas .contenedor {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
-    align-items: stretch;
+    align-items: center;
     min-height: 200px;
+    width: 70%;
+    background-color: #353745;
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;
 }
 
 .empresas_item {
-    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.empresas_item img{
+    padding: 1rem;
+    margin: .5rem;
+    background-color:#D1CECA;
+    border-radius: 10px;
+    width: 200px;
+    height: 150px;
 }
 @media(max-width:1250px){
     .main-title {
