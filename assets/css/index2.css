@@ -27,6 +27,9 @@ body{
 .color-aqua{
     color: #34b0be;
 }
+.text-center{
+    text-align: center;
+}
 
 .title{
     font-weight: bolder;
@@ -46,16 +49,32 @@ body{
 }
 
 .card{
-    margin: 1rem;
-    padding: 1rem;
+    padding: .5rem;
     background-color: #ffffff;
-    width: 100%;
+    width: 90%;
     min-height: 7rem;
 }
 
 .card-image{
-    
+    max-width:100%;
 }
+.card-body{
+
+}
+.card-header{
+
+}
+.card-footer{
+
+}
+.card-title{
+    font-weight: bold;
+    font-size: 1rem;
+}
+.card-text{
+    color: #D1CECA;
+}
+
 /*************Navegacion*/
 .main-header{
     min-height: 5rem;
@@ -232,6 +251,24 @@ body{
 
 }
 
+/************* Mis habilidades*************/
+.progress-container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    min-height: 1rem;
+    background-color: gray;
+    position: relative;
+    border-radius: 10px;
+}
+.progress-bar{
+    background-color:#34b0be;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+
+}
+
 /*************querys*************/
 
 @media(max-width:1250px){
@@ -315,7 +352,7 @@ body{
     }
     
     
-    /*************Jumbotron*/
+    /*************Jumbotron**************/
     .jumbotron_section-left{
         left: 15%;
     } 
@@ -323,7 +360,6 @@ body{
         right: 10%;
     
     }
-
 }
 
 @media(max-width:600px){
