@@ -58,7 +58,38 @@ body {
     color: #ffffff;
 }
 
-/*Main nav*/
+.card{
+    padding: .5rem;
+    background-color: #ffffff;
+    width: 90%;
+    min-height: 7rem;
+}
+.card-image{
+    max-width:100%;
+}
+.max-width-100{
+    max-width:100%;
+
+}
+.card-body{
+
+}
+.card-header{
+
+}
+.card-footer{
+
+}
+.card-title{
+    font-weight: bold;
+    font-size: 1rem;
+}
+.card-text{
+    color: #D1CECA;
+}
+
+/*************Main nav************/
+/*********************************/
 .main_header .contenedor {
     margin: 1rem auto;
     min-height: 50px;
@@ -77,6 +108,7 @@ body {
 }
 
 /*************Jumbotron************/
+/**********************************/
 .jumbotron .contenedor {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -144,6 +176,7 @@ body {
 }
 
 /*************Empresas************/
+/**********************************/
 .empresas .contenedor {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -169,6 +202,44 @@ body {
     border-radius: 10px;
     width: 200px;
     height: 150px;
+}
+
+/*************About me************/
+/**********************************/
+.about-me .contenedor{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 60%;
+    min-height: 50vh;
+    text-align: center;
+}
+.about-me .contenedor h2{
+    padding: 1rem;
+
+    justify-self: center;
+    align-self: flex-end;
+}
+.about-me .contenedor p{
+    padding: 1rem;
+    /* color: #ffffff; */
+    justify-self: center;
+    align-self: flex-start;
+}
+
+/*************Services*************/
+/**********************************/
+
+.services .contenedor{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    align-items: center;
+    gap:1rem;
+
+    margin: 1rem auto;
+    min-height: 40vh;
+
 }
 @media(max-width:1250px){
     .main-title {
