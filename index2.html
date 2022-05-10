@@ -20,6 +20,8 @@
 <body>
     <header class="main-header">
         <div class="contenedor">
+            <span class="btn-nav"><i class="fa-solid fa-bars"></i></span>
+
             <nav class="main-nav">
                 <ul class="main-menu">
                     <li class="menu-item color-aqua">Home</li>
@@ -99,13 +101,6 @@
         </section>
         <!--Fin del Jumbotron-->
         <!--Empresas-->
-        <!-- <section class="empresas">
-            <div class="contenedor">
-                <div class="empresas-item"><img src="./assets/images/akar-icons_google-fill.png" alt=""></div>
-                <div class="empresas-item"><img src="./assets/images/ant-design_amazon-outlined.png" alt=""></div>
-                <div class="empresas-item"><img src="./assets/images/bi_spotify.png" alt=""></div>
-            </div>
-        </section> -->
         <section class="empresas">
             <div class="contenedor">
                 <div class="row">
@@ -149,7 +144,7 @@
                     Servicios
                 </h2>
                 <section class="row">
-                    <div class="col-md-6 col-lg-4">
+                    <div class="services-item col-md-6 col-lg-4">
                         <div class="card text-center">
                             <svg width="110" height="111" viewBox="0 0 110 111" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" style="max-width: 100%;">
@@ -178,7 +173,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
+                    <div class="services-item col-md-6 col-lg-4">
                         <div class="card text-center">
                             <svg width="110" height="111" viewBox="0 0 110 111" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -207,7 +202,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
+                    <div class="services-item col-md-6 col-lg-4">
                         <div class="card text-center">
                             <svg width="110" height="111" viewBox="0 0 110 111" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -246,30 +241,37 @@
                 <h2 class="subsection_title color-aqua text-center">
                     Mis habilidades
                 </h2>
+
+
+
                 <div class="row">
-                    <div class="col-12">
-                        <h3>web Design</h3>
+                    <div class="col-12 mis-habilidades_item">
+                        <h3 class="small-subtitle color-white">Web Design</h3>
+
+                        <br>
                         <div class="progress-container">
                             <div id="myBar" class="progress-bar" style="width:80%"></div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <h3>Interaction Design</h3>
+                    <div class="col-12 mis-habilidades_item">
+                        <h3 class=" small-subtitle color-white">Interaction Design</h3>
+                        <br>
                         <div class="progress-container">
                             <div id="myBar" class="progress-bar" style="width:95%"></div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <h3>Ux</h3>
+
+                    <div class="col-12 mis-habilidades_item">
+                        <h3 class=" small-subtitle color-white">Ux</h3>
+                        <br>
                         <div class="progress-container">
                             <div id="myBar" class="progress-bar" style="width:80%"></div>
                         </div>
                     </div>
                 </div>
+
+
+
             </div>
         </section>
         <section class="mis-portafolio">
@@ -278,18 +280,18 @@
                     Mis portafolios
                 </h2>
                 <div class="row">
-                    <div class="col-md-6 col-lg-3">
+                    <div class="portafolio-item col-md-6 col-lg-4">
                         <img src="assets/images/Rectangle 65.jpg" alt="portafolio" class="max-width-100">
                     </div>
-                    <div class="col-md-6 col-lg-3">
+                    <div class="portafolio-item col-md-6 col-lg-4">
                         <img src="assets/images/image 4.jpg" alt="portafolio" class="max-width-100">
 
                     </div>
-                    <div class="col-md-6 col-lg-3">
+                    <div class="portafolio-item col-md-6 col-lg-4">
                         <img src="assets/images/Rectangle 53.jpg" alt="portafolio" class="max-width-100">
 
                     </div>
-                    <div class="col-md-6 col-lg-3">
+                    <div class="portafolio-item col-md-6 col-lg-4">
                         <img src="assets/images/Group 47.jpg" alt="portafolio" class="max-width-100">
 
                     </div>
@@ -301,7 +303,7 @@
             <div class="contenedor">
                 <h2 class="subsection_title color-aqua text-center">Contacto</h2>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="contact-item left-item col-md-6">
                         <div class="card text-center">
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -311,15 +313,15 @@
                             </svg>
                             <div class="card-body">
                                 <card class="card-title">
-                                    UX/UI Design
+                                    Número celular
                                 </card>
                                 <div class="card-text">
-                                    Desde diseño hasta implementacion del desarrollo
+                                    5523652412
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="contact-item right-item col-md-6">
                         <div class="card text-center">
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -333,10 +335,10 @@
                             </svg>
                             <div class="card-body">
                                 <card class="card-title">
-                                    UX/UI Design
+                                    Email
                                 </card>
                                 <div class="card-text">
-                                    Desde diseño hasta implementacion del desarrollo
+                                    ejemplo@correo.com
                                 </div>
                             </div>
                         </div>
@@ -354,6 +356,6 @@
             </div>
         </div>
     </footer>
+    <script src="/assets/js/index.js"></script>
 </body>
-
 </html>

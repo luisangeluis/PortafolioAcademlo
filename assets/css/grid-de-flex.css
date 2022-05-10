@@ -22,6 +22,7 @@
     padding: .5rem;
 
 }
+
 @media(min-width:576px){
     .col-1{
         width: calc(100%/12*1);
