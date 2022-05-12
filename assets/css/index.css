@@ -8,6 +8,9 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 li {
     list-style: none;
@@ -52,7 +55,9 @@ body {
 .d-flex {
     display: flex;
 }
-
+.max-height-0{
+    max-height: 100vh;
+}
 .title {
     font-weight: bolder;
     font-size: 150px;
@@ -385,6 +390,7 @@ body {
 
 .mis-portafolio .portafolio-item {
     padding: 1rem 2rem;
+    filter: grayscale(100%);
 }
 
 .portafolio-item img {
@@ -672,6 +678,52 @@ body {
         max-width: 95%;
     }
 
+    
+}
 
+/*************Animaciones**************/
+/**************************************/
+
+/*************Menu navegacion**************/
+
+.menu-item a{
+    transition: all 500ms;
+}
+.zoom-text{
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+
+/*************Servicios**************/
+.zoom{
+    transition: all 500ms ease-in-out;
+}
+
+.zoom:hover .card{
+    box-shadow: 1px 1px 2px 1px gray;
+}
+.zoom:hover{
+    -webkit-transform:scale(1.15);
+    transform:scale(1.15);
+    
+}
+/*************Mis portafolios**************/
+
+.mis-portafolio .zoom{
+    transition: all 500ms ease-in-out;
+    
 
 }
+.mis-portafolio .portafolio-item:hover {
+    padding: 1rem 2rem;
+    filter: grayscale(0);
+
+}
+
+.mis-portafolio .zoom:hover {
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+}
+
+
