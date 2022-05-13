@@ -8,9 +8,6 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
 }
-html{
-    scroll-behavior: smooth;
-}
 
 li {
     list-style: none;
@@ -30,14 +27,6 @@ body {
     margin-right: auto;
 }
 
-.bg-black{
-    background-color: #000000;
-}
-.bg-gray{
-    background-color: gray;
-    opacity: .9;
-    border-radius: 5px;
-}
 .color-aqua {
     color: #34b0be;
 }
@@ -45,9 +34,7 @@ body {
 .color-white {
     color: #ffffff;
 }
-.color-black{
-    color: #000000;
-}
+
 .text-center {
     text-align: center;
 }
@@ -55,9 +42,7 @@ body {
 .d-flex {
     display: flex;
 }
-.max-height-0{
-    max-height: 100vh;
-}
+
 .title {
     font-weight: bolder;
     font-size: 150px;
@@ -132,20 +117,14 @@ body {
 /*************************************/
 .main-header .contenedor {
     min-height: 5rem;
-    padding: 1rem 1rem;
-    margin: 0 auto;
+    padding: .5rem 1rem;
+    margin: 1rem auto;
 
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-
-    transition: all 1s ease-in-out;
 }
 
 .main-nav {
     padding: .5rem .1rem;
+    /* background-color: lightcoral; */
 }
 
 .main-menu {
@@ -156,7 +135,7 @@ body {
 }
 
 .menu-item {
-    margin: .5rem .1rem;
+    margin: .5rem .5rem;
     padding: .5rem 1rem;
     white-space: nowrap;
 }
@@ -167,11 +146,9 @@ body {
 
 /*************Jumbotron***************/
 /*************************************/
-
 .jumbotron .contenedor {
     min-height: 50vh;
     padding: 2rem 1rem;
-    margin-top: 6rem;
 }
 
 .jumbotron .contenedor .row:nth-child(1) {
@@ -374,12 +351,6 @@ body {
 
 }
 
-.progress-bar span{
-    position: relative;
-    top: -1.5rem;
-    display: inline-block;
-}
-
 /************* Mis Portafolio*************/
 /******************************************/
 .mis-portafolio .contenedor {
@@ -389,7 +360,6 @@ body {
 
 .mis-portafolio .portafolio-item {
     padding: 1rem 2rem;
-    filter: grayscale(100%);
 }
 
 .portafolio-item img {
@@ -426,7 +396,7 @@ body {
 
 .contact-item .card {
     max-width: 40%;
-    /* max-height: 15rem;  */
+    /* max-height: 10rem; */
     word-break: normal;
     word-wrap: break-word;
 }
@@ -547,22 +517,6 @@ body {
     .empresas .contenedor {
         margin-top: -5vh;
     }
-
-    /************* Mis habilidades*************/
-    /******************************************/
-    .mis-habilidades .contenedor {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-    }
-
-    /*************Contact**********************/
-    /******************************************/
-    .contact-item .card{
-        max-width: 60%;
-    }
-
 }
 
 @media(max-width:768px) {
@@ -678,51 +632,5 @@ body {
     }
 
     
+  
 }
-
-/*************Animaciones**************/
-/**************************************/
-
-/*************Menu navegacion**************/
-
-.menu-item a{
-    transition: all 500ms;
-}
-.zoom-text{
-    font-size: 1.1rem;
-    font-weight: bolder;
-}
-
-
-/*************Servicios**************/
-.zoom{
-    transition: all 500ms ease-in-out;
-}
-
-.zoom:hover .card{
-    box-shadow: 1px 1px 2px 1px gray;
-}
-.zoom:hover{
-    -webkit-transform:scale(1.15);
-    transform:scale(1.15);
-    
-}
-/*************Mis portafolios**************/
-
-.mis-portafolio .zoom{
-    transition: all 500ms ease-in-out;
-    
-
-}
-.mis-portafolio .portafolio-item:hover {
-    padding: 1rem 2rem;
-    filter: grayscale(0);
-
-}
-
-.mis-portafolio .zoom:hover {
-    -webkit-transform:scale(1.1);
-    transform:scale(1.1);
-}
-
-
