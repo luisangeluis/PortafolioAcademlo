@@ -64,13 +64,13 @@ body {
 }
 .title {
     font-weight: bolder;
-    font-size: 150px;
+    font-size: 50px;
 
 }
 
 .subtitle {
     font-weight: bold;
-    font-size: 50px;
+    font-size: 32px;
     color: #ffffff;
     /* margin: .5rem; */
     padding: .5rem;
@@ -83,7 +83,7 @@ body {
 .subsection_title {
     /* margin: .5rem; */
     padding: .5rem;
-    font-size: 45px;
+    font-size: 32px;
     font-weight: normal;
 }
 
@@ -189,18 +189,14 @@ body {
 
 .jumbotron_section-left,.jumbotron_section-right{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .jumbotron_section-left{
     /* order:1; */
     /* flex-direction: column; */
     justify-content: space-between;
     align-self: flex-start;
-}
-
-.jumbotron_section-right{
-    /* flex-direction: column; */
-    align-self: flex-end;
-
 }
 
 .jumbotron_section-left .subsection_title{
@@ -233,7 +229,7 @@ body {
 }
 .social-media{
     /* color:#D1CECA; */
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 .item_social-media{
     display: flex;
@@ -524,277 +520,66 @@ body {
 
 /*************querys*************/
 /********************************/
-@media(max-width:992px) {
-    :root {
-        font-size: 16px;
+
+   
+
+@media(min-width:576px){
+    /*************Jumbotron**********************/
+    /******************************************/
+    
+    .jumbotron .contenedor{
+        /* background-color: red;
+        opacity: .8; */
+        max-width: 80%;
 
     }
-
-    .title {
-        font-weight: bolder;
-        font-size: 100px;
-
-    }
-
-    .subtitle {
-        font-weight: bold;
-        font-size: 41px;
-        color: #ffffff;
-    }
-
-    .subsection_title {
-        font-size: 32px;
-        font-weight: normal;
-    }
-
-    /********Main navegacio***************/
-    /************************************/
-
-    .main-nav {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 2s ease;
-        background-color: gray;
-        padding: 0;
-    }
-
-    .main-menu {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .btn-nav {
-        width: 100%;
-        text-align: right;
-        min-height: 3rem;
-
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-
-    .btn-nav i {
-        font-size: 2rem;
-    }
-
-    .show-menu {
-        max-height: 100vh;
-
-    }
-
-    /********Jumbotron*******************/
-    /************************************/
-    /* .jumbotron .contenedor {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        min-height: 40vh;
-
-    }
-
-    .jumbotron .contenedor .row:nth-child(1) {
+    .jumbotron .contenedor>.row{
+        justify-content: stretch;
+        align-items: stretch;
+        min-width: 40vh;
         min-height: 40vh;
     }
-
-    .jumbotron_section-left {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
+    .jumbotron_section-left{
+        justify-content: space-evenly;
     }
-
-    .jumbotron_section-right {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
+    .jumbotron_section-right{
+        justify-content: space-evenly;
+        align-items: center;
+        
     }
-
-    .jumbotron-circle {
+    .jumbotron-circle{
         width: 40vh;
         height: 40vh;
-    } */
-
-    /*************Empresas*************/
-    /*************************************/
-    .empresas .contenedor {
-        margin-top: -5vh;
-    }
-
-    /************* Mis habilidades*************/
-    /******************************************/
-    .mis-habilidades .contenedor {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-    }
-
-    /*************Contact**********************/
-    /******************************************/
-    .contact-item .card{
-        max-width: 60%;
     }
 
 }
 
-@media(max-width:768px) {
-
-    :root {
-        font-size: 16px;
-
+@media(min-width:992px){
+    .jumbotron .contenedor{
+        /* background-color:yellow;
+        opacity: .8; */
     }
 
-    .title {
-        font-weight: bolder;
-        font-size: 50px;
-
+    .jumbotron .contenedor>.row{
+        justify-content: stretch;
+        align-items: stretch;
+        min-width: 50vh;
+        min-height: 50vh;
     }
-
-    .subtitle {
-        font-weight: bold;
-        font-size: 32px;
-        color: #ffffff;
-    }
-
-    .subsection_title {
-        font-size: 18px;
-        font-weight: normal;
-    }
-
-    /********Jumbotron*******************/
-    /************************************/
-    /* .jumbotron .contenedor {
-        min-height: 30vh;
-    }
-
-    .jumbotron .contenedor .row:nth-child(1) {
-        min-height: 30vh;
-    }
-
-    .jumbotron-circle {
-        width: 30vh;
-        height: 30vh;
-    } */
-
-    /*************Empresas*************/
-    /*************************************/
-    .empresas .contenedor {
-        margin-top: -7vh;
-    }
-
-    .empresas .contenedor {
-        padding: .5rem 0;
-        width: 70%;
-    }
-
-    .empresas .row .col-md-4 {
-        padding: .1rem 0;
-    }
-
-}
-
-@media(max-width:576px) {
-
-    /********Jumbotron*******************/
-    /************************************/
-    /* .jumbotron .contenedor {
-        min-height: 30vh;
-    }
-
-    .jumbotron .contenedor .row:nth-child(1) {
-        min-height: 30vh;
-    }
-
-    .jumbotron_section-left {
+    .jumbotron_section-left{
         flex-direction: column;
-        align-items: flex-start;
     }
-
-    .jumbotron_section-left .subsection_title {
-        padding: 0;
-        margin: auto 0;
-    }
-
-    .jumbotron_section-right {
-        justify-content: center;
+    .jumbotron_section-right{
+       
+        flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
+        
+        
     }
-
-    .jumbotron .social-media {
-        margin: 0;
-        flex-wrap: nowrap;
-
+    .jumbotron-circle{
+        width: 50vh;
+        height: 50vh;
     }
-
-    .jumbotron .item_social-media {
-        margin: .5rem auto;
-    }
-
-    .jumbotron-circle {
-        width: 30vmax;
-        height: 30vmax;
-    } */
-
-    /*************Empresas*************/
-    /*************************************/
-    .empresas .contenedor {
-
-        width: 90%;
-    }
-
-    /*************Services****************/
-    /*************************************/
-
-    .services-item .card svg {
-        max-width: 95%;
-    }
-
-    
 }
-
-/*************Animaciones**************/
-/**************************************/
-
-/*************Menu navegacion**************/
-
-.menu-item a{
-    transition: all 500ms;
-}
-.zoom-text{
-    font-size: 1.1rem;
-    font-weight: bolder;
-}
-
-
-/*************Servicios**************/
-.zoom{
-    transition: all 500ms ease-in-out;
-}
-
-.zoom:hover .card{
-    box-shadow: 1px 1px 2px 1px gray;
-}
-.zoom:hover{
-    -webkit-transform:scale(1.15);
-    transform:scale(1.15);
-    
-}
-/*************Mis portafolios**************/
-
-.mis-portafolio .zoom{
-    transition: all 500ms ease-in-out;
-    
-
-}
-.mis-portafolio .portafolio-item:hover {
-    padding: 1rem 2rem;
-    filter: grayscale(0);
-
-}
-
-.mis-portafolio .zoom:hover {
-    -webkit-transform:scale(1.1);
-    transform:scale(1.1);
-}
-
 
