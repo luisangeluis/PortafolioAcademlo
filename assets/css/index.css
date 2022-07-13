@@ -35,11 +35,7 @@ body {
   background-color: #000000;
 }
 
-.bg-gray {
-  background-color: gray;
-  opacity: .9;
-  border-radius: 5px;
-}
+
 
 .color-aqua {
   color: #34b0be;
@@ -107,6 +103,13 @@ body {
   font-weight: bolder;
 }
 
+.zoom-text{
+  /* -webkit-transform:scale(1.3);
+  transform:scale(1.3); */
+  font-size: 105%;
+  font-weight: bold;
+}
+
 .card {
   padding: .5rem;
   background-color: #ffffff;
@@ -166,8 +169,10 @@ body {
   right: 0;
   z-index: 1;
   border-radius: 10px;
-  background-color: #3e415a99;
-  box-shadow: 7px 7px 10px #3e415a;
+  /* background-color: #3e415a99;
+  box-shadow: 7px 7px 10px #3e415a; */
+  background-color: #24263599;
+
 }
 
 .main-nav {
@@ -180,6 +185,7 @@ body {
 
 .main-menu {
   color: #ffffff;
+  /* margin-top: 3rem; */
 }
 
 .show-menu {
@@ -192,6 +198,16 @@ body {
   margin: .5rem .1rem;
   padding: .5rem 1rem;
   white-space: nowrap;
+  cursor:pointer;
+}
+.menu-item:hover{
+  -webkit-transform:scale(1.05);
+  transform:scale(1.05);
+  opacity:.7;
+  
+}
+.menu-item a{
+  transition: font-size .1s ease;
 }
 
 .btn-nav {
@@ -200,7 +216,19 @@ body {
   top: 1.3rem;
   right: 1.3rem;
   font-size: 2rem;
+  cursor: pointer;
 
+}
+.btn-nav:hover{
+  -webkit-transform:scale(1.1);
+  transform:scale(1.1);
+}
+
+.nav-effect {
+  
+  background-color: #3e415a99;
+  box-shadow: 7px 7px 10px #3e415a;
+   
 }
 
 /*************Jumbotron***************/
@@ -269,11 +297,14 @@ body {
 }
 
 .social-media_item {
-
+  background-color: #D1CECA;
+  color: #242635;
   margin: .1rem;
   padding: .5rem;
-  background-color: #D1CECA;
   border-radius: 50%;
+}
+.social-media_item i{
+
 }
 
 /* 
@@ -407,6 +438,10 @@ body {
 
 .about-me_text {
   width: 70%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  
 }
 
 /*************Services*************/
@@ -588,6 +623,13 @@ body {
 
   }
 
+  .social-media_item {
+    
+    /* padding: 1rem; */
+    /* margin: .5rem; */
+    font-size: 1.5rem;
+  }
+
   .jumbotron-circle {
     width: 40vh;
     height: 40vh;
@@ -626,6 +668,7 @@ body {
     margin: 0;
     padding: .5rem .3rem;
   }
+  
 
   .btn-nav {
     display: none;
@@ -646,7 +689,6 @@ body {
 
   .jumbotron_section-right {
     flex-direction: column;
-
   }
 
 }
@@ -672,7 +714,13 @@ body {
     font-size: 45px;
 
   }
-
+  /************Header*****************/
+  /************************************/
+  .menu-item{
+    padding: .5rem 1rem;
+  }
+  /************End Header*****************/
+  /************************************/
   /************Jumbotron*****************/
   /************************************/
   .jumbotron .contenedor>.row {

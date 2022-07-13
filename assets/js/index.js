@@ -15,7 +15,7 @@ window.addEventListener('scroll', (e => {
     console.log(e);
     let valorScrollTop = this.scrollY;
     console.log(valorScrollTop);
-    valorScrollTop < 1 ? mainHeader.classList.remove('bg-gray',) : mainHeader.classList.add('bg-gray');
+    valorScrollTop < 1 ? mainHeader.classList.remove('nav-effect',) : mainHeader.classList.add('nav-effect');
 
 }));
 
