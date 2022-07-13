@@ -21,6 +21,17 @@ window.addEventListener('scroll', (e => {
 
 //Animacion opciones de nav
 //****************************
+// let width = window.innerWidth;
+// if(width>=768){
+//     mainNav.classList.remove(show-menu);
+// }
+addEventListener('resize',()=>{
+    let width=window.innerWidth;
+    if(width>=768){
+        mainNav.classList.remove('show-menu');
+    }
+})
+
 const mainMenuOptions = document.querySelectorAll('.main-menu .menu-item');
 
 console.log(mainMenuOptions);
