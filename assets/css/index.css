@@ -95,7 +95,7 @@ body {
 .subsection_title {
   /* margin: .5rem; */
   padding: .5rem;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: normal;
 }
 
@@ -156,6 +156,71 @@ body {
 
 }
 
+/*************Animations**************/
+/*************************************/
+.element-from-left {
+  opacity: 0;
+  transition: translateX 1s;
+}
+
+.from-left-animation {
+  animation: fromLeftAnimation 1.3s;
+  opacity: 1;
+}
+
+@keyframes fromLeftAnimation {
+  0% {
+    transform: translateX(-100px);
+  }
+
+  100% {
+    transform: translateX(0);
+
+  }
+}
+
+.element-from-right{
+  opacity: 0;
+  transition: translateX 1s;
+}
+
+.from-right-animation{
+  animation: fromRightAnimation 1.3s;
+  opacity: 1;
+}
+@keyframes fromRightAnimation {
+  0% {
+    transform: translateX(100px);
+  }
+
+  100% {
+    transform: translateX(0);
+
+  }
+}
+
+.element-from-up{
+  opacity: 0;
+  transition: translateX 1s;
+}
+
+.from-up-animation{
+  animation: fromUpAnimation 1.3s;
+  opacity: 1;
+}
+@keyframes fromUpAnimation {
+  0% {
+    transform: translateY(50px);
+  }
+
+  100% {
+    transform: translateY(0);
+
+  }
+}
+/***********End Animations************/
+/*************************************/
+
 /*************Navegacion**************/
 /*************************************/
 .main-header .contenedor {
@@ -171,6 +236,7 @@ body {
   /* background-color: #3e415a99;
   box-shadow: 7px 7px 10px #3e415a; */
   background-color: #24263599;
+  border: solid 1px silver;
 
 }
 
@@ -178,6 +244,7 @@ body {
   padding: .5rem .1rem;
   max-height: 0;
   overflow: hidden;
+  /* transition: max-height 700ms ease-in; */
   transition: max-height 700ms ease-in;
 
 }
@@ -189,7 +256,6 @@ body {
 
 .show-menu {
   max-height: 100vh;
-  transition: max-height 700ms ease-out;
 
 
 }
@@ -241,8 +307,8 @@ body {
 
 .jumbotron .contenedor {
   margin-top: 5rem;
-  min-height: 33.3vh;
-
+  min-height: 50vh;
+  padding: 3rem 1rem;
 }
 
 .jumbotron .contenedor>.row {
@@ -274,8 +340,8 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
-  width: 25vh;
-  height: 25vh;
+  width: 23vh;
+  height: 23vh;
   z-index: -1;
 
   border-radius: 50%;
@@ -319,117 +385,6 @@ body {
   opacity: .9;
 }
 
-/* 
-.jumbotron .contenedor {
-    min-height: 50vh;
-    padding: 2rem 1rem;
-    margin-top: 6rem;
-}
-
-.jumbotron .contenedor .row:nth-child(1) {
-    min-height: 50vh;
-    position: relative;
-
-    align-items: flex-start;
-
-}
-
-.jumbotron_section-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.jumbotron_section-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.jumbotron-circle {
-    position: absolute;
-    width: 55vh;
-    height: 55vh;
-
-    background-color: grey;
-    border-radius: 100%;
-    z-index: -1;
-
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.perfil-image {
-    max-width: 100%;
-    height: 100.3%;
-
-}
-
-.jumbotron_hr {
-}
-
-.jumbotron .social-media {
-    justify-content: flex-start;
-    margin: .5rem;
-    min-height: 3rem;
-
-}
-
-.jumbotron .item_social-media {
-    background-color: #D1CECA;
-    color: #242635;
-    width: 2.7rem;
-    height: 2.7rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    margin: auto .5rem;
-    padding: .3rem;
-
-} */
-
-/*************Empresas****************/
-/*************************************/
-.empresas .contenedor {
-  width: 65%;
-  margin: 1rem auto;
-  margin-top: -4%;
-  padding: 1rem;
-  background-color: gray;
-  border-radius: 5px;
-}
-
-.empresas .contenedor .row {
-  flex-wrap: nowrap;
-}
-
-.empresas .row .col-md-4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* max-width: 50%; */
-}
-
-.empresa-item {
-  width: 70%;
-  margin: .5rem;
-  padding: .5rem;
-  background-color: #D1CECA;
-  border-radius: 10px;
-  text-align: center;
-
-}
-
-.empresa-item img {
-  max-width: 100%;
-  max-height: 6rem;
-}
-
 /*************About me****************/
 /*************************************/
 .about-me .contenedor {
@@ -437,7 +392,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1rem auto;
+  margin: 0 auto;
   min-height: 50vh;
   padding: 1rem;
   text-align: center;
@@ -449,9 +404,8 @@ body {
 }
 
 .about-me_text {
-  width: 70%;
+  width: 100%;
   padding: 1rem;
-  font-size: 1.2rem;
   font-weight: bold;
 
 }
@@ -462,6 +416,8 @@ body {
   width: 75%;
   margin: 1rem auto;
   padding: 1rem;
+  min-height: 50vh;
+
 }
 
 .proyects-main {
@@ -515,10 +471,10 @@ body {
 .tecnologies-list {
   width: 100%;
   justify-content: space-between;
-  
+
 }
 
-.tecnologies-list li{
+.tecnologies-list li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -529,13 +485,13 @@ body {
   transition: all 300ms ease-in-out;
 }
 
-.tecnologies-list li:hover{
+.tecnologies-list li:hover {
   transition: all 300ms ease-in-out;
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
 }
 
-.tecnologies-list i{
+.tecnologies-list i {
   box-shadow: 7px 7px 10px #3e415a;
   width: 100%;
   /* height: 7rem; */
@@ -544,11 +500,13 @@ body {
 
 
 }
-.tecnologies-list p{
+
+.tecnologies-list p {
   font-size: 1.3rem;
   padding: .5rem 1rem;
   text-align: center;
   padding: .2rem;
+  word-wrap: break-word;
 
 }
 
@@ -588,24 +546,6 @@ body {
 
 /************* End Tecnologias*************/
 /******************************************/
-
-/************* Mis Portafolio*************/
-/******************************************/
-.mis-portafolio .contenedor {
-  margin: 1rem auto;
-  padding: 1rem;
-}
-
-.mis-portafolio .portafolio-item {
-  padding: 1rem 2rem;
-  filter: grayscale(100%);
-}
-
-.portafolio-item img {
-  border: 1.5px solid;
-
-}
-
 /*************Contact**********************/
 /******************************************/
 .contact .contenedor {
@@ -634,10 +574,19 @@ body {
 }
 
 .contact-item .card {
-  max-width: 40%;
-  /* max-height: 15rem;  */
+  max-width: 100%;
   word-break: normal;
   word-wrap: break-word;
+
+  transition: all 300ms ease-in-out;
+
+}
+
+.contact-item .card:hover {
+  transition: all 300ms ease-in-out;
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+  box-shadow: 10px 10px 20px #3e415a;
 }
 
 /*************Footer**************/
@@ -685,6 +634,7 @@ body {
   .jumbotron .contenedor {
     max-width: 80%;
     margin-top: 7rem;
+    padding: 5rem 0;
   }
 
   .jumbotron_section-left {
@@ -704,6 +654,21 @@ body {
     height: 40vh;
   }
 
+  /*************End Jumbotron**********************/
+  /******************************************/
+  .about-me_text {
+    width: 75%;
+    
+  }
+  /*************Contact me**********************/
+  /******************************************/
+
+  .contact-item .card {
+    max-width: 75%;
+  }
+
+  /*************EndContact me**********************/
+  /******************************************/
 }
 
 @media(min-width:768px) {
@@ -715,13 +680,16 @@ body {
     justify-content: flex-end;
     align-items: center;
     width: 95%;
-
   }
 
   .main-nav {
     padding: 0;
     overflow: initial;
-    max-height: 100vh;
+
+    min-height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .main-menu {
@@ -752,14 +720,21 @@ body {
   .jumbotron .contenedor>.row {
     min-width: 45vh;
     min-height: 45vh;
+    align-items: stretch;
   }
 
   .jumbotron_section-left {
     flex-direction: column;
+    justify-content: flex-start;
   }
 
   .jumbotron_section-right {
-    flex-direction: column;
+    /* flex-direction: column; */
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
   }
 
   /*************End Jumbotron**********************/
@@ -773,7 +748,7 @@ body {
   }
 
   .proyects-item .card svg {
-    max-width: 50%;
+    max-width:50%;
   }
 
   .proyects-item .card-body {}
@@ -782,19 +757,31 @@ body {
   /******************************************/
   /************* Tecnologies*************/
   /******************************************/
-  .tecnologies-list i{
+  .tecnologies-list i {
     width: 100%;
     height: 8.5rem;
   }
-  .tecnologies-list p{
+
+  .tecnologies-list p {
     font-size: 1rem;
-    word-wrap:break-word;
-    word-spacing:1px;
+    word-wrap: break-word;
+    word-spacing: 1px;
   }
+
   .tecnologies-list {
     justify-content: flex-start;
   }
+
   /*************End Tecnologies*************/
+  /******************************************/
+  /*************Contact me**********************/
+  /******************************************/
+
+  .contact-item .card {
+    max-width: 50%;
+  }
+
+  /*************EndContact me**********************/
   /******************************************/
 }
 
@@ -848,8 +835,6 @@ body {
   .proyects-item .card {
     height: 23rem;
   }
-
-
 
   /************End Proyects*****************/
   /************************************/
