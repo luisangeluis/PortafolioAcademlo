@@ -73,112 +73,43 @@ const observerSections = new IntersectionObserver(callbackSections, options);
 mainSections.forEach(section => {
     observerSections.observe(section);
 })
-
-//Animacion from left
-//****************************
-
-// let screenWidth = getWidth();
-// setRootMargin(screenWidth);
-
-// function getWidth(){
-//     let width = window.innerWidth;
-//     return width;
-// }
-// function setRootMargin(width){
-//     if(width>=1020){
-//         rootMargin = '-400px';
-//     }else{
-//         rootMargin='-100px'
-//     }
-// }
-
-// addEventListener('resize',()=>{
-//     console.log('hola');
-//     screenWidth =getWidth();
-//     setRootMargin();
-// })
-
-
-const elementsFromLeft = document.querySelectorAll('.element-from-left');
-const optionsLeft={
-    // root: null,
-    // rootMargin:'1000px'
-    // threshold: 0.5,
-    // root: document.querySelector('body'),
-}
-
-
-const cbElementsFromLeft = (entries)=> {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            console.log(entry.target);
-
-            entry.target.classList.add('from-left-animation');
-        } else {
-            entry.target.classList.remove('from-left-animation');
-
-        }
-    })
-}
-
-const observerElementsFromLeft = new IntersectionObserver(cbElementsFromLeft);
-
-elementsFromLeft.forEach(element => {
-    observerElementsFromLeft.observe(element);
-})
-
-//Animacion from right
-//****************************
-const elementsFromRight = document.querySelectorAll('.element-from-right');
-const optionsRight = {
-    // root: null,
-    // rootMargin
-    // threshold: 1
-}
-
-const cbElementsFromRight = (entries)=> {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            console.log(entry.target);
-
-            entry.target.classList.add('from-right-animation');
-        } else {
-            entry.target.classList.remove('from-right-animation');
-
-        }
-    })
-}
-
-const observerElementsFromRight = new IntersectionObserver(cbElementsFromRight);
-
-elementsFromRight.forEach(element => {
-    observerElementsFromRight.observe(element);
-})
-
 //Animacion from up
 //****************************
 const elementsFromUp = document.querySelectorAll('.element-from-up');
-console.log(elementsFromUp);
+
+const optionsUp = {
+    // root: null,
+    rootMargin:'-100px'
+    // threshold:1
+}
+// console.log(elementsFromUp);
 const cbElementsFromUp = (entries)=> {
     entries.forEach(entry => {
+        console.log(entry);
+        
         if (entry.isIntersecting) {
-            console.log(entry.target);
+            // console.log(entry.target);
 
             entry.target.classList.add('from-up-animation');
-        } else {
+        }
+        else{
             entry.target.classList.remove('from-up-animation');
 
         }
+
+        
+        
     })
 }
 
-const observerElementsFromUp = new IntersectionObserver(cbElementsFromUp);
+const observerElementsFromUp = new IntersectionObserver(cbElementsFromUp,optionsUp);
 
-elementsFromUp.forEach(element => {
-    observerElementsFromUp.observe(element);
-})
+elementsFromUp.forEach(element => observerElementsFromUp.observe(element))
 
+//TO DO HACER LA ANIMACION Y QUE SE AJUSTE AL TAMAÑO DE LA PANTALLA
+const getAnimation=(elements,className)=>{
 
+}
 
 
 

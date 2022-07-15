@@ -23,6 +23,7 @@ a {
 
 body {
   background-color: #242635;
+  overflow-x: hidden;
 }
 
 .contenedor {
@@ -160,17 +161,17 @@ body {
 /*************************************/
 .element-from-left {
   opacity: 0;
-  transition: translateX 1s;
+  transition: translateX 1s ease-in-out;
 }
 
 .from-left-animation {
-  animation: fromLeftAnimation 1.3s;
+  animation: fromLeftAnimation 1.5s;
   opacity: 1;
 }
 
 @keyframes fromLeftAnimation {
   0% {
-    transform: translateX(-100px);
+    transform: translateX(-150px);
   }
 
   100% {
@@ -181,16 +182,16 @@ body {
 
 .element-from-right{
   opacity: 0;
-  transition: translateX 1s;
+  transition: translateX 1s ease-in-out;
 }
 
 .from-right-animation{
-  animation: fromRightAnimation 1.3s;
+  animation: fromRightAnimation 1.5s;
   opacity: 1;
 }
 @keyframes fromRightAnimation {
   0% {
-    transform: translateX(100px);
+    transform: translateX(150px);
   }
 
   100% {
@@ -205,12 +206,12 @@ body {
 }
 
 .from-up-animation{
-  animation: fromUpAnimation 1.3s;
+  animation: fromUpAnimation 1s;
   opacity: 1;
 }
 @keyframes fromUpAnimation {
   0% {
-    transform: translateY(50px);
+    transform: translateY(100px);
   }
 
   100% {
@@ -393,7 +394,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  min-height: 50vh;
+  min-height: 70vh;
   padding: 1rem;
   text-align: center;
 }
@@ -555,7 +556,7 @@ body {
 }
 
 .contact .contenedor .row {
-  min-height: 70vh
+  min-height: 60vh
 }
 
 .contact-item {
@@ -633,8 +634,9 @@ body {
 
   .jumbotron .contenedor {
     max-width: 80%;
+    min-height: 50vh;
     margin-top: 7rem;
-    padding: 5rem 0;
+    padding-top: 5rem;
   }
 
   .jumbotron_section-left {
