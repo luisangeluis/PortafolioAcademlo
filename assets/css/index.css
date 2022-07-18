@@ -11,6 +11,7 @@
 
 html {
   scroll-behavior: smooth;
+
 }
 
 li {
@@ -24,6 +25,12 @@ a {
 body {
   background-color: #242635;
   overflow-x: hidden;
+  /* background-color: red; */
+
+
+
+  
+  /* background-image:url(../images/denim-pattern.webp) */
 }
 
 .contenedor {
@@ -32,6 +39,10 @@ body {
   margin-right: auto;
 }
 
+img{
+  max-width: 75%;
+  height: 50%;
+}
 .bg-black {
   background-color: #000000;
 }
@@ -48,6 +59,30 @@ body {
 
 .color-black {
   color: #000000;
+}
+
+.color-orange {
+  color: #E44D26;
+}
+
+.color-blue {
+  color: #264de4;
+}
+
+.color-yellow {
+  color: #F0DB4F;
+}
+
+.color-purple {
+  color: #563d7c;
+}
+
+.color-blue-react {
+  color: #61DBFB
+}
+
+.color-brown {
+  color: #F1502F;
 }
 
 .text-center {
@@ -94,7 +129,7 @@ body {
 }
 
 .subsection_title {
-  /* margin: .5rem; */
+  margin: 1rem 0;
   padding: .5rem;
   font-size: 20px;
   font-weight: normal;
@@ -111,14 +146,15 @@ body {
 
 .card {
   padding: .5rem;
-  background-color: #ffffff;
+  /* background-color: #e6dddd;
+  background-color: whitesmoke; */
   width: 90%;
   min-height: 7rem;
   border-radius: 5px;
 
-  background-image: url('/assets/images/Ellipse 14.svg');
+  /* background-image: url('/assets/images/Ellipse 14.svg');
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center top; */
 }
 
 .card-image {
@@ -174,44 +210,61 @@ body {
     transform: translateX(-150px);
   }
 
+  50% {
+    transform: translateX(25px);
+
+  }
+
   100% {
     transform: translateX(0);
 
   }
 }
 
-.element-from-right{
+.element-from-right {
   opacity: 0;
   transition: translateX 1s ease-in-out;
 }
 
-.from-right-animation{
+.from-right-animation {
   animation: fromRightAnimation 1.5s;
   opacity: 1;
 }
+
 @keyframes fromRightAnimation {
   0% {
     transform: translateX(150px);
   }
 
+  50% {
+    transform: translateX(-25px);
+
+  }
+
   100% {
     transform: translateX(0);
 
   }
 }
 
-.element-from-up{
+.element-from-up {
   opacity: 0;
   transition: translateX 1s;
 }
 
-.from-up-animation{
-  animation: fromUpAnimation 1s;
+.from-up-animation {
+  animation: fromUpAnimation 1.3s;
   opacity: 1;
 }
+
 @keyframes fromUpAnimation {
   0% {
-    transform: translateY(100px);
+    transform: translateY(50px);
+  }
+
+  50% {
+    transform: translateY(-35px);
+
   }
 
   100% {
@@ -219,6 +272,14 @@ body {
 
   }
 }
+
+.matrix:hover{
+  /* -webkit-transform: matrix(0.5, 0.1, 0.5,1,10, -2);
+  transform: matrix(0.5, 0.1, 0.5, 1, 10, -2); */
+  -webkit-transform: perspective(50px) rotateY(5deg);
+  transform: perspective(50px) rotateY(5deg);
+}
+
 /***********End Animations************/
 /*************************************/
 
@@ -238,6 +299,7 @@ body {
   box-shadow: 7px 7px 10px #3e415a; */
   background-color: #24263599;
   border: solid 1px silver;
+  transition: box-shadow 150ms ease-in;
 
 }
 
@@ -400,7 +462,7 @@ body {
 }
 
 .about-me .subsection_title {
-  margin: 1rem;
+  /* margin: 1rem; */
   padding: 1rem;
 }
 
@@ -447,6 +509,10 @@ body {
   transition: all 300ms ease-in-out;
 
 }
+.proyects-item .card-body .card-text{
+  color: rgba(0, 0, 0, 0.779);
+  font-weight: bold;
+}
 
 .proyects-item .card:hover {
   transition: all 300ms ease-in-out;
@@ -487,9 +553,9 @@ body {
 }
 
 .tecnologies-list li:hover {
-  transition: all 300ms ease-in-out;
+  /* transition: all 300ms ease-in-out;
   transform: scale(1.1);
-  -webkit-transform: scale(1.1);
+  -webkit-transform: scale(1.1); */
 }
 
 .tecnologies-list i {
@@ -578,9 +644,14 @@ body {
   max-width: 100%;
   word-break: normal;
   word-wrap: break-word;
-
+  box-shadow: 7px 7px 10px #3e415a;
   transition: all 300ms ease-in-out;
 
+}
+
+.contact-item .card-body .card-text {
+  color: rgba(0, 0, 0, 0.779);
+  font-weight: bold;
 }
 
 .contact-item .card:hover {
@@ -624,7 +695,7 @@ body {
   }
 
   .subsection_title {
-
+    font-weight: bold;
     font-size: 31px;
 
   }
@@ -660,13 +731,15 @@ body {
   /******************************************/
   .about-me_text {
     width: 75%;
-    
+
   }
+
   /*************Contact me**********************/
   /******************************************/
 
   .contact-item .card {
     max-width: 75%;
+
   }
 
   /*************EndContact me**********************/
@@ -745,15 +818,19 @@ body {
   /******************************************/
   .proyects-item .card {
     width: 100%;
-    height: 23rem;
+    height: 18rem;
 
   }
 
   .proyects-item .card svg {
-    max-width:50%;
+    /* height:2rem; */
+    max-width: 100%;
+
   }
 
-  .proyects-item .card-body {}
+  .proyects-item .card-body {
+    /* max-height: */
+  }
 
   /*************End Proyects**********************/
   /******************************************/
@@ -835,7 +912,8 @@ body {
   /************Proyects*****************/
   /************************************/
   .proyects-item .card {
-    height: 23rem;
+    height: 22rem;
+    max-height: 28rem;
   }
 
   /************End Proyects*****************/
