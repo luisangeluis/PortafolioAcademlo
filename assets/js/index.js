@@ -70,7 +70,7 @@ mainSections.forEach((section) => {
   observerSections.observe(section);
 });
 
-//Animacion from up
+//Animations 
 //*****************/
 //*****************/
 const setAnimation = (elementsToAnimate, animationClass, rootMargin) => {
@@ -88,12 +88,7 @@ const setAnimation = (elementsToAnimate, animationClass, rootMargin) => {
       if (entry.isIntersecting) {
         entry.target.classList.add(animationClass)
       } 
-      // else {
-      //   entry.target.classList.remove(animationClass);
-      //   console.log('no esta intersectado');
-
-      // }
-
+      
     });
   };
 
@@ -105,28 +100,32 @@ let width =window.innerWidth;
 
 if(width<992){
   setAnimation('.element-from-up','from-up-animation','-30%')
+
   setAnimation('.element-from-left','from-left-animation','-30%')
   setAnimation('.element-from-right','from-right-animation','-30%')
 
 }
 else{
-  setAnimation('.element-from-up','from-up-animation','-50%')
-  setAnimation('.element-from-left','from-left-animation','-50%')
-  setAnimation('.element-from-right','from-right-animation','-50%')
+  setAnimation('.element-from-up','from-up-animation','-50% 0%')
+
+  setAnimation('.element-from-left','from-left-animation','-50% 0%')
+  setAnimation('.element-from-right','from-right-animation','-50% 0%')
 
 }
 window.addEventListener('resize',()=>{
   width =window.innerWidth
 
   if(width<992){
-    setAnimation('.element-from-up','from-up-animation','-30%')
+    setAnimation('.element-from-up','from-up-animation','-30% 0%')
+
     setAnimation('.element-from-left','from-left-animation','-30%')
     setAnimation('.element-from-right','from-right-animation','-30%')
 
   }else{
-    setAnimation('.element-from-up','from-up-animation','-50%')
-    setAnimation('.element-from-left','from-left-animation','-50%')
-    setAnimation('.element-from-right','from-right-animation','-50%')
+    setAnimation('.element-from-up','from-up-animation','-50% 0%')
+
+    setAnimation('.element-from-left','from-left-animation','-50% 0%')
+    setAnimation('.element-from-right','from-right-animation','-50% 0%')
 
   }
 })

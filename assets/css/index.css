@@ -24,12 +24,12 @@ a {
 
 body {
   background-color: #242635;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   /* background-color: red; */
 
 
 
-  
+
   /* background-image:url(../images/denim-pattern.webp) */
 }
 
@@ -39,10 +39,11 @@ body {
   margin-right: auto;
 }
 
-img{
+img {
   max-width: 75%;
   height: 50%;
 }
+
 .bg-black {
   background-color: #000000;
 }
@@ -151,6 +152,7 @@ img{
   width: 90%;
   min-height: 7rem;
   border-radius: 5px;
+  background-color: #3e415a;
 
   /* background-image: url('/assets/images/Ellipse 14.svg');
   background-repeat: no-repeat;
@@ -163,6 +165,10 @@ img{
 
 .card svg {
   margin-top: 10%;
+}
+
+.card-body {
+  /* border: 1px solid #3e415a; */
 }
 
 .max-width-100 {
@@ -184,15 +190,30 @@ img{
 
 .card-text {
   color: #D1CECA;
-  /* margin: 1rem auto; */
   padding: .5rem;
 }
 
 .primary-shadow {
-  box-shadow: 7px 7px 10px #3e415a;
-
+  box-shadow: 1.5px 1.5px 1px #3e415a;
 }
 
+
+.btn-one{
+  padding: .3rem .5rem;
+  background-color: #3e415a;
+  color: #34b0be;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px whitesmoke;
+  font-weight: bold;
+  transition: all 500ms;
+  cursor: pointer;
+}
+.btn-one:hover{
+  /* box-shadow: 1.5px 1.5px 1px #3e415a; */
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
 /*************Animations**************/
 /*************************************/
 .element-from-left {
@@ -273,11 +294,11 @@ img{
   }
 }
 
-.matrix:hover{
+.matrix:hover {
   /* -webkit-transform: matrix(0.5, 0.1, 0.5,1,10, -2);
   transform: matrix(0.5, 0.1, 0.5, 1, 10, -2); */
-  -webkit-transform: perspective(50px) rotateY(5deg);
-  transform: perspective(50px) rotateY(5deg);
+  -webkit-transform: perspective(50px) rotateY(1deg);
+  transform: perspective(50px) rotateY(1deg);
 }
 
 /***********End Animations************/
@@ -369,48 +390,54 @@ img{
 /*************************************/
 
 .jumbotron .contenedor {
-  margin-top: 5rem;
-  min-height: 50vh;
-  padding: 3rem 1rem;
+  /* margin-top: 5rem; */
+  min-height: 75vh;
+  /* padding: 3rem 1rem; */
 }
 
 .jumbotron .contenedor>.row {
-  /* min-height: 33.33vh; */
-  min-height: 40vh;
+  /* min-height: 55vh; */
+  min-height: 75vh;
   min-width: 100%;
   justify-content: space-between;
   position: relative;
 
 }
 
-.jumbotron_section-left,
-.jumbotron_section-right {
+.jumbotron_section-left{
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  order: 1;
+
+}
+.jumbotron_section-right{
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.jumbotron_section-left {
-  order: 1;
-}
-
-.jumbotron_section-right {
   text-align: left;
+
 }
+
+
 
 .jumbotron-circle {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  width: 23vh;
-  height: 23vh;
+  width: 30vh;
+  height: 30vh;
   z-index: -1;
 
   border-radius: 50%;
   max-height: 100%;
   background-color: #3e415a;
-
+  background-image: url(../images/Remove\ background-Luis-compress.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   top: 0;
   left: 0;
   right: 0;
@@ -501,24 +528,24 @@ img{
 }
 
 .proyects-item .card {
-  background-position: center -10%;
   text-align: center;
   word-break: normal;
   word-wrap: break-word;
   padding: 1rem .5rem;
   transition: all 300ms ease-in-out;
-
+  cursor: pointer;
 }
-.proyects-item .card-body .card-text{
+
+.proyects-item .card-body .card-text {
   color: rgba(0, 0, 0, 0.779);
   font-weight: bold;
 }
 
 .proyects-item .card:hover {
-  transition: all 300ms ease-in-out;
-  -webkit-transform: scale(1.03);
-  transform: scale(1.03);
-  box-shadow: 10px 10px 20px #3e415a;
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+  box-shadow: .5px .5px 3px whitesmoke;
+
 }
 
 
@@ -550,6 +577,7 @@ img{
   font-size: 4rem;
   text-align: center;
   transition: all 300ms ease-in-out;
+
 }
 
 .tecnologies-list li:hover {
@@ -559,12 +587,20 @@ img{
 }
 
 .tecnologies-list i {
-  box-shadow: 7px 7px 10px #3e415a;
+  /* box-shadow: 0.5px 0.5px 3px whitesmoke; */
+  background-color: #3e415a;
   width: 100%;
-  /* height: 7rem; */
   padding: 1rem;
+  border-radius: 5px;
+  transition: all 300ms ease-in-out;
 
+}
 
+.tecnologies-list i:hover {
+  transition: all 300ms ease-in-out;
+  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  box-shadow: 0.5px 0.5px 3px whitesmoke;
 
 }
 
@@ -576,40 +612,6 @@ img{
   word-wrap: break-word;
 
 }
-
-/* 
-.mis-habilidades_item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.tecnologias .small-subtitle {
-  align-self: flex-start;
-}
-
-.progress-container {
-  width: 100%;
-  min-height: 1rem;
-  background-color: gray;
-  position: relative;
-  border-radius: 10px;
-}
-
-.progress-bar {
-  background-color: #34b0be;
-  height: 100%;
-  position: absolute;
-  border-radius: 10px;
-
-}
-
-.progress-bar span {
-  position: relative;
-  top: -1.5rem;
-  display: inline-block;
-} */
 
 /************* End Tecnologias*************/
 /******************************************/
@@ -644,7 +646,7 @@ img{
   max-width: 100%;
   word-break: normal;
   word-wrap: break-word;
-  box-shadow: 7px 7px 10px #3e415a;
+  /* box-shadow: 7px 7px 10px #3e415a; */
   transition: all 300ms ease-in-out;
 
 }
@@ -655,10 +657,9 @@ img{
 }
 
 .contact-item .card:hover {
-  transition: all 300ms ease-in-out;
-  -webkit-transform: scale(1.03);
-  transform: scale(1.03);
-  box-shadow: 10px 10px 20px #3e415a;
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+  box-shadow: .5px .5px 3px whitesmoke;
 }
 
 /*************Footer**************/
@@ -671,8 +672,9 @@ img{
   min-height: 7rem;
   margin: 1rem auto 0;
   padding: 1rem;
-  background-color: gray;
-
+  background-color: rgba(0, 0, 0, 0.484);
+  color: whitesmoke;
+  font-weight: bold;
 }
 
 
@@ -705,8 +707,7 @@ img{
 
   .jumbotron .contenedor {
     max-width: 80%;
-    min-height: 50vh;
-    margin-top: 7rem;
+    /* margin-top: 7rem; */
     padding-top: 5rem;
   }
 
@@ -792,6 +793,9 @@ img{
   /******************************************/
   /*************Jumbotron**********************/
   /******************************************/
+  .jumbotron .contenedor{
+    padding-top: 12rem;
+  }
   .jumbotron .contenedor>.row {
     min-width: 45vh;
     min-height: 45vh;
@@ -804,13 +808,13 @@ img{
   }
 
   .jumbotron_section-right {
-    /* flex-direction: column; */
+    flex-direction: column;
     text-align: center;
-
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
   }
+
+  
 
   /*************End Jumbotron**********************/
   /******************************************/
