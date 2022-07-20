@@ -24,7 +24,7 @@ a {
 
 body {
   background-color: #242635;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   /* background-color: red; */
 
 
@@ -420,7 +420,12 @@ img {
 
 }
 
-
+.jumbotron_section-right .btn-one{
+    max-width: 30%;
+    /* word-break:break-all; */
+    word-wrap:break-word;
+    font-size: .7rem;
+}
 
 .jumbotron-circle {
   display: flex;

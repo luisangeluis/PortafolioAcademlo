@@ -102,7 +102,7 @@ if(width<992){
   setAnimation('.element-from-up','from-up-animation','-30%')
 
   setAnimation('.element-from-left','from-left-animation','-30%')
-  setAnimation('.element-from-right','from-right-animation','-30%')
+  setAnimation('.element-from-right','from-right-animation','-10%')
 
 }
 else{
@@ -119,7 +119,7 @@ window.addEventListener('resize',()=>{
     setAnimation('.element-from-up','from-up-animation','-30% 0%')
 
     setAnimation('.element-from-left','from-left-animation','-30%')
-    setAnimation('.element-from-right','from-right-animation','-30%')
+    setAnimation('.element-from-right','from-right-animation','-10%')
 
   }else{
     setAnimation('.element-from-up','from-up-animation','-50% 0%')
