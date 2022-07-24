@@ -99,15 +99,13 @@ const setAnimation = (elementsToAnimate, animationClass, rootMargin) => {
 let width =window.innerWidth;
 
 if(width<992){
-  setAnimation('.element-from-up','from-up-animation','-30%')
-
-  setAnimation('.element-from-left','from-left-animation','-30%')
+  setAnimation('.element-from-up','from-up-animation','-10%')
+  setAnimation('.element-from-left','from-left-animation','-10%')
   setAnimation('.element-from-right','from-right-animation','-10%')
 
 }
 else{
   setAnimation('.element-from-up','from-up-animation','-50% 0%')
-
   setAnimation('.element-from-left','from-left-animation','-50% 0%')
   setAnimation('.element-from-right','from-right-animation','-50% 0%')
 
@@ -116,16 +114,39 @@ window.addEventListener('resize',()=>{
   width =window.innerWidth
 
   if(width<992){
-    setAnimation('.element-from-up','from-up-animation','-30% 0%')
-
-    setAnimation('.element-from-left','from-left-animation','-30%')
+    setAnimation('.element-from-up','from-up-animation','-10%')
+    setAnimation('.element-from-left','from-left-animation','-10%')
     setAnimation('.element-from-right','from-right-animation','-10%')
 
   }else{
     setAnimation('.element-from-up','from-up-animation','-50% 0%')
-
     setAnimation('.element-from-left','from-left-animation','-50% 0%')
     setAnimation('.element-from-right','from-right-animation','-50% 0%')
 
   }
 })
+
+let highOfPage =window.scrollY;
+resetAnimations('element-from-up','from-up-animation',highOfPage);
+// resetAnimations('element-from-left','from-right-animation',highOfPage);
+
+window.addEventListener('scroll',()=>{
+  highOfPage =window.scrollY;
+  resetAnimations('element-from-up','from-up-animation',highOfPage)
+  // resetAnimations('element-from-left','from-left-animation',highOfPage);
+
+})
+
+function resetAnimations(animatedElement,classToRemove,highOfPage){
+  let high =highOfPage;
+
+  const elements =document.querySelectorAll(`.${animatedElement}`)
+
+  if(highOfPage===0){
+    console.log(highOfPage);
+
+    elements.forEach(element=>element.classList.remove(classToRemove));
+  }
+
+}
+
