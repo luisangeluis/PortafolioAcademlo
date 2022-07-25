@@ -14,9 +14,19 @@ window.addEventListener("scroll", (e) => {
   // console.log(e);
   let valorScrollTop = this.scrollY;
   // console.log(valorScrollTop);
-  valorScrollTop < 1
-    ? mainHeader.classList.remove("nav-effect")
-    : mainHeader.classList.add("nav-effect");
+  if(valorScrollTop < 1){
+    mainHeader.classList.remove("nav-effect")
+  }else{
+
+
+    mainHeader.classList.add("nav-effect");
+    setTimeout(()=>{
+      mainHeader.classList.remove("nav-effect")
+
+    },3000)
+
+  }
+    
 });
 
 //Animacion opciones de nav
@@ -40,7 +50,9 @@ mainSections = Array.from(mainSections);
 
 options = {
   root: null,
-  rootMargin: "-50% 0%",
+  // rootMargin: "-50% 0%",
+  threshold: .85
+
 };
 
 const callbackSections = (entries) => {
@@ -70,9 +82,9 @@ mainSections.forEach((section) => {
   observerSections.observe(section);
 });
 
-//Animations 
-//*****************/
-//*****************/
+// Animations 
+// *****************/
+// *****************/
 const setAnimation = (elementsToAnimate, animationClass, rootMargin) => {
 
   const elements = document.querySelectorAll(elementsToAnimate);
@@ -102,43 +114,44 @@ if(width<992){
   setAnimation('.element-from-up','from-up-animation','-10%')
   setAnimation('.element-from-left','from-left-animation','-10%')
   setAnimation('.element-from-right','from-right-animation','-10%')
+  setAnimation('.element-from-grow','from-grow-animation','-10%')
+
 
 }
 else{
   setAnimation('.element-from-up','from-up-animation','-50% 0%')
   setAnimation('.element-from-left','from-left-animation','-50% 0%')
   setAnimation('.element-from-right','from-right-animation','-50% 0%')
+  setAnimation('.element-from-grow','from-grow-animation','-50% 0%')
 
 }
 window.addEventListener('resize',()=>{
-  width =window.innerWidth
+  // width =window.innerWidth
 
-  if(width<992){
-    setAnimation('.element-from-up','from-up-animation','-10%')
-    setAnimation('.element-from-left','from-left-animation','-10%')
-    setAnimation('.element-from-right','from-right-animation','-10%')
+  // if(width<992){
+  //   setAnimation('.element-from-up','from-up-animation','-10%')
+  //   setAnimation('.element-from-left','from-left-animation','-10%')
+  //   setAnimation('.element-from-right','from-right-animation','-10%')
 
-  }else{
-    setAnimation('.element-from-up','from-up-animation','-50% 0%')
-    setAnimation('.element-from-left','from-left-animation','-50% 0%')
-    setAnimation('.element-from-right','from-right-animation','-50% 0%')
+  // }else{
+  //   setAnimation('.element-from-up','from-up-animation','-50% 0%')
+  //   setAnimation('.element-from-left','from-left-animation','-50% 0%')
+  //   setAnimation('.element-from-right','from-right-animation','-50% 0%')
 
-  }
+  // }
 })
 
 let highOfPage =window.scrollY;
 resetAnimations('element-from-up','from-up-animation',highOfPage);
-// resetAnimations('element-from-left','from-right-animation',highOfPage);
 
 window.addEventListener('scroll',()=>{
   highOfPage =window.scrollY;
   resetAnimations('element-from-up','from-up-animation',highOfPage)
-  // resetAnimations('element-from-left','from-left-animation',highOfPage);
 
 })
 
 function resetAnimations(animatedElement,classToRemove,highOfPage){
-  let high =highOfPage;
+  // let high =highOfPage;
 
   const elements =document.querySelectorAll(`.${animatedElement}`)
 

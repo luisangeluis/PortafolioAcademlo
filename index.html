@@ -14,7 +14,9 @@
   <!--Fon awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <!--Custom Styles-->
   <link rel="stylesheet" href="assets/css/grid-de-flex.css">
   <link rel="stylesheet" href="assets/css/index.css">
@@ -65,7 +67,7 @@
             </p>
             <a href="./assets/archivos/curriculum Luis.pdf" class="btn-one" target="_blank">DownLoad CV</a>
           </div>
-          <div class="jumbotron-circle">
+          <div class="jumbotron-circle element-from-grow">
           </div>
         </div>
       </div>
@@ -85,7 +87,7 @@
       </div>
    </section>
     <!--Proyects-->
-    <section class="proyects element-from-up" id="proyects">
+    <section class="proyects" id="proyects">
       <div class="contenedor ">
         <h2 class="subsection_title color-aqua text-center">
           Proyects
@@ -93,20 +95,7 @@
         <section class="row">
           <div class="proyects-item col-md-6 col-lg-4">
             <div class="card text-center primary-shadow">
-              <svg width="100" height="100" viewBox="0 0 110 111" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M55.0001 9.22222C29.6863 9.22222 9.16675 29.8662 9.16675 55.3333C9.16675 80.8005 29.6863 101.444 55.0001 101.444C80.3138 101.444 100.833 80.8005 100.833 55.3333C100.833 29.8662 80.3138 9.22222 55.0001 9.22222Z"
-                  fill="white" stroke="#34B0BE" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M36.6667 97.608V64.5556L55.0001 32.2778L73.3334 64.5556V97.608" fill="#34B0BE" />
-                <path d="M36.6667 97.608V64.5556L55.0001 32.2778L73.3334 64.5556V97.608" stroke="#34B0BE"
-                  stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
-                <path
-                  d="M36.6667 64.5555C36.6667 64.5555 41.8322 69.1667 45.8334 69.1667C49.8347 69.1667 55.0001 64.5555 55.0001 64.5555C55.0001 64.5555 60.1655 69.1667 64.1667 69.1667C68.168 69.1667 73.3334 64.5555 73.3334 64.5555"
-                  fill="#34B0BE" />
-                <path
-                  d="M36.6667 64.5555C36.6667 64.5555 41.8322 69.1667 45.8334 69.1667C49.8347 69.1667 55.0001 64.5555 55.0001 64.5555C55.0001 64.5555 60.1655 69.1667 64.1667 69.1667C68.168 69.1667 73.3334 64.5555 73.3334 64.5555"
-                  stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
+              <img src="./assets/images/pokedex.png" alt="">
               <div class="card-body">
                 <card class="card-title">
                   Pokedex.
@@ -255,21 +244,26 @@
   <footer class="main-footer">
     <div class="contenedor">
       <div class="row">
-        <div class="col-12">
+        <!-- <div class="col-12">
           <p class="">Hecho con <i class="fa-solid fa-heart"></i> en Academlo</p>
+        </div> -->
+        <div class="col-12">
+          <article class="social-media">
+            <a href="https://www.linkedin.com/in/luis-angel-zepeda-gonzalez" target="_blank"
+              class="social-media_item">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+  
+            <a href="https://github.com/luisangeluis" class="social-media_item" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </article>
         </div>
+        
       </div>
     </div>
   </footer>
-  <!-- AOS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      easing: 'ease-out-back',
-      duration: 1000,
-
-    });
-  </script>
+ 
   <!-- Custom js -->
   <script src="/assets/js/index.js"></script>
 </body>

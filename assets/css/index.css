@@ -23,31 +23,16 @@ a {
 }
 
 body {
+  /* overflow-x: hidden; */
   background-color: #242635;
-  /* background-color: #374191; */
-  /* background-color: #3f4e2c; */
-  /* background-color: #27576a; */
-  /* background-color: black; */
-  /* background-color: #27576a; */
-  overflow-x: hidden;
-
-  /* background-color: rgb(31, 28, 28); */
-  /* background-image:
-    radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 20px),
-    radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 15px),
-    radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 20px),
-    radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 15px);
-  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px; */
-
-
   background-image:
-    radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 5px),
-    radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 4px),
-    radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 5px),
+    radial-gradient(white, rgba(0, 0, 0, .5) 2px, transparent 5px),
+    radial-gradient(white, rgba(0, 0, 0, .5) 1px, transparent 5px),
+    radial-gradient(white, rgba(0, 0, 0, .5) 2px, transparent 5px),
     radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 1px, transparent 4px);
-  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 10px 30px, 50px 60px, 34px 50px;
+
 
 }
 
@@ -55,6 +40,7 @@ body {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  min-height: 25vh;
 }
 
 img {
@@ -65,8 +51,6 @@ img {
 .bg-black {
   background-color: #000000;
 }
-
-
 
 .color-aqua {
   color: #34b0be;
@@ -139,7 +123,6 @@ img {
   font-weight: bolder;
   font-size: 32px;
   color: #ffffff;
-  /* margin: .5rem; */
   padding: .5rem;
 }
 
@@ -165,15 +148,11 @@ img {
 
 .card {
   padding: .5rem;
-  /* background-color: #e6dddd;
-  background-color: whitesmoke; */
   width: 90%;
   min-height: 7rem;
   border-radius: 5px;
-  /* background-color: #3e415a; */
-  /* background-color: #5a6945; */
-  background-color: #80aec3;
-  background-color: gray;
+  background-color: #3f456d;
+
 }
 
 .card-image {
@@ -183,11 +162,6 @@ img {
 .card svg {
   margin-top: 10%;
 }
-
-.card-body {
-  /* border: 1px solid #3e415a; */
-}
-
 .max-width-100 {
   max-width: 100%;
 
@@ -195,8 +169,6 @@ img {
 
 .card-body {
   padding: 1rem .5rem;
-  /* margin: 1rem auto; */
-
 }
 
 .card-title {
@@ -214,7 +186,6 @@ img {
   box-shadow: 1.5px 1.5px 1px #3e415a;
 }
 
-
 .btn-one {
   padding: .3rem .5rem;
   background-color: #3e415a;
@@ -228,7 +199,6 @@ img {
 }
 
 .btn-one:hover {
-  /* box-shadow: 1.5px 1.5px 1px #3e415a; */
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
@@ -239,10 +209,37 @@ img {
   opacity: 0;
   transition: translateX 1s ease-in-out;
 }
+.element-from-right {
+  opacity: 0;
+  transition: translateX 1s ease-in-out;
+}
+.element-from-up {
+  opacity: 0;
+  transition: translateX 1s;
+}
+
+.element-from-grow{
+  opacity: 0;
+  transition: all 2s;
+}
 
 .from-left-animation {
   animation: fromLeftAnimation 1.5s;
   opacity: 1;
+}
+.from-right-animation {
+  animation: fromRightAnimation 1.5s;
+  opacity: 1;
+}
+.from-up-animation {
+  animation: fromUpAnimation 1.3s;
+  opacity: 1;
+}
+
+.from-grow-animation{
+  animation: grow 1.5;
+  opacity: 1;
+
 }
 
 @keyframes fromLeftAnimation {
@@ -261,16 +258,6 @@ img {
   }
 }
 
-.element-from-right {
-  opacity: 0;
-  transition: translateX 1s ease-in-out;
-}
-
-.from-right-animation {
-  animation: fromRightAnimation 1.5s;
-  opacity: 1;
-}
-
 @keyframes fromRightAnimation {
   0% {
     transform: translateX(150px);
@@ -285,16 +272,6 @@ img {
     transform: translateX(0);
 
   }
-}
-
-.element-from-up {
-  opacity: 0;
-  transition: translateX 1s;
-}
-
-.from-up-animation {
-  animation: fromUpAnimation 1.3s;
-  opacity: 1;
 }
 
 @keyframes fromUpAnimation {
@@ -313,9 +290,22 @@ img {
   }
 }
 
+@keyframes grow {
+  0% {
+    transform:scale(.5);
+    
+  }
+
+  50% {
+    transform:scale(.7);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 .matrix:hover {
-  /* -webkit-transform: matrix(0.5, 0.1, 0.5,1,10, -2);
-  transform: matrix(0.5, 0.1, 0.5, 1, 10, -2); */
   -webkit-transform: perspective(50px) rotateY(1deg);
   transform: perspective(50px) rotateY(1deg);
 }
@@ -335,11 +325,17 @@ img {
   right: 0;
   z-index: 1;
   border-radius: 10px;
-  /* background-color: #3e415a99;
-  box-shadow: 7px 7px 10px #3e415a; */
-  background-color: #24263599;
+  /* background-color: #24263599;
+  border: solid 1px silver; */
+  transition: box-shadow 1000ms;
+  box-shadow: .3px .3px 3px 2px #71748d;
+
+}
+
+.main-header .contenedor:hover{
+  box-shadow: .1px .1px 10px 5px #71748d;
+  /* background-color: #24263599; */
   border: solid 1px silver;
-  transition: box-shadow 150ms ease-in;
 
 }
 
@@ -347,20 +343,15 @@ img {
   padding: .5rem .1rem;
   max-height: 0;
   overflow: hidden;
-  /* transition: max-height 700ms ease-in; */
   transition: max-height 700ms ease-in;
-
 }
 
 .main-menu {
   color: #ffffff;
-  /* margin-top: 3rem; */
 }
 
 .show-menu {
   max-height: 100vh;
-
-
 }
 
 .menu-item {
@@ -398,51 +389,86 @@ img {
   transform: scale(1.1);
 }
 
-.nav-effect {
-
-  background-color: #3e415a99;
-  box-shadow: 7px 7px 10px #3e415a;
+.contenedor.nav-effect {
+  box-shadow: .1px .1px 10px 5px #71748d;
+  /* background-color: #24263599; */
+  border: solid 1px silver;
+  transition: box-shadow 500ms;
 
 }
 
 /*************Jumbotron***************/
 /*************************************/
+.jumbotron{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  background-image: url('../images/teclado.jpg'),linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9));
+  background-size: cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 0;
+  /* border-bottom-radius:50%; */
+  border-bottom-left-radius:50%;
+  border-bottom-right-radius:50%;
+  border-top-right-radius:50%;
+  border-top-left-radius:50%;
+
+
+}
+
+.jumbotron::before{
+  content:' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  background-color: #0A0A0A99;
+  opacity: .99;
+
+}
 
 .jumbotron .contenedor {
-  /* margin-top: 5rem; */
-  min-height: 75vh;
-  /* padding: 3rem 1rem; */
+  padding-top: 5rem;
+
 }
 
 .jumbotron .contenedor>.row {
-  /* min-height: 55vh; */
-  min-height: 75vh;
+  min-height: inherit;
   min-width: 100%;
   justify-content: space-between;
   position: relative;
-
+  /* z-index: 3; */
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .jumbotron_section-left {
   display: flex;
-
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   order: 1;
+
+  flex-grow: 1;
 
 }
 
 .jumbotron_section-right {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   text-align: left;
 
 }
 
 .jumbotron_section-right .btn-one {
   max-width: 30%;
-  /* word-break:break-all; */
   word-wrap: break-word;
   font-size: .7rem;
 }
@@ -452,17 +478,22 @@ img {
   justify-content: center;
   align-items: center;
   position: absolute;
-  width: 30vh;
-  height: 30vh;
+  width: 25vh;
+  height: 35vh;
   z-index: -1;
-
   border-radius: 50%;
+  border: solid 1px whitesmoke;
+  box-shadow:1px 1px 3px 2px white;
   max-height: 100%;
-  /* background-color: #3e415a; */
-  /* background-color: #768660; */
-  background-color: #80aec3;
-  background-color: gray;
+  /* background-color: #3f456d; */
   background-image: url(../images/Remove\ background-Luis-compress.png);
+
+  background-color: #242635;
+  
+  /* background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 10px 30px, 50px 60px, 34px 50px; */
+
+
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -472,6 +503,12 @@ img {
   bottom: 0;
   margin: auto;
 
+}
+
+.jumbotron-circle:hover{
+  box-shadow: .1px .1px 8px 3px white;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .jumbotron-circle .img-fluid {
@@ -511,13 +548,13 @@ img {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  min-height: 70vh;
   padding: 1rem;
   text-align: center;
+  /* background-color: #3f456d; */
+  /* border-radius: 20px; */
 }
 
 .about-me .subsection_title {
-  /* margin: 1rem; */
   padding: 1rem;
 }
 
@@ -530,12 +567,33 @@ img {
 
 /*************Proyects*************/
 /**********************************/
+.proyects{
+  position: relative;
+  background-image: url('../images/teclado.jpg'),linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  background-size: cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+.proyects::before{
+  content:' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #0A0A0A99;
+  opacity: .99;
+  
+}
+
 .proyects .contenedor {
   width: 75%;
   margin: 1rem auto;
   padding: 1rem;
-  min-height: 50vh;
-
 }
 
 .proyects-main {
@@ -546,9 +604,7 @@ img {
 }
 
 .proyects-item {
-
   padding: .5rem;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -562,17 +618,23 @@ img {
   padding: 1rem .5rem;
   transition: all 300ms ease-in-out;
   cursor: pointer;
+  color: whitesmoke;
+  box-shadow: .3px .3px 3px 2px white;
+
+  opacity: .95;
+
 }
 
 .proyects-item .card-body .card-text {
-  color: rgba(0, 0, 0, 0.779);
   font-weight: bold;
 }
 
 .proyects-item .card:hover {
   -webkit-transform: scale(1.02);
   transform: scale(1.02);
-  box-shadow: .5px .5px 3px whitesmoke;
+  box-shadow: .1px .1px 8px 3px white;
+
+  opacity: 1;
 
 }
 
@@ -582,12 +644,9 @@ img {
 /******************************************/
 .tecnologies .contenedor {
   max-width: 75%;
-  min-height: 50vh;
   margin: 1rem auto;
   padding: 1rem;
-  /* display: flex;
-  justify-content: stretch;
-  align-items: stretch; */
+  
 }
 
 .tecnologies-list {
@@ -608,20 +667,15 @@ img {
 
 }
 
-.tecnologies-list li:hover {
-  /* transition: all 300ms ease-in-out;
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1); */
-}
-
 .tecnologies-list i {
-  /* box-shadow: 0.5px 0.5px 3px whitesmoke; */
-  background-color: #3e415a;
-  background-color: gray;
+  background-color: #3f456d;
   width: 100%;
   padding: 1rem;
   border-radius: 5px;
   transition: all 300ms ease-in-out;
+  box-shadow: .3px .3px 3px 2px white;
+  opacity: .95;
+
 
 }
 
@@ -629,7 +683,9 @@ img {
   transition: all 300ms ease-in-out;
   transform: scale(1.02);
   -webkit-transform: scale(1.02);
-  box-shadow: 0.5px 0.5px 3px whitesmoke;
+  box-shadow: .1px .1px 8px 3px white;
+
+  opacity: 1;
 
 }
 
@@ -647,13 +703,12 @@ img {
 /*************Contact**********************/
 /******************************************/
 .contact .contenedor {
-  min-height: 50vh;
   margin: 1rem auto;
   padding: 1rem;
 }
 
 .contact .contenedor .row {
-  min-height: 60vh
+  min-height: inherit;
 }
 
 .contact-item {
@@ -675,20 +730,25 @@ img {
   max-width: 100%;
   word-break: normal;
   word-wrap: break-word;
-  /* box-shadow: 7px 7px 10px #3e415a; */
   transition: all 300ms ease-in-out;
+  color: whitesmoke;
+  box-shadow: .3px .3px 3px 2px white;
 
+  opacity: .95;
 }
 
 .contact-item .card-body .card-text {
-  color: rgba(0, 0, 0, 0.779);
+  /* color: rgba(0, 0, 0, 0.779); */
   font-weight: bold;
 }
 
 .contact-item .card:hover {
   -webkit-transform: scale(1.02);
   transform: scale(1.02);
-  box-shadow: .5px .5px 3px whitesmoke;
+  box-shadow: .1px .1px 8px 3px white;
+
+  opacity: 1;
+
 }
 
 /*************Footer**************/
@@ -701,14 +761,20 @@ img {
   min-height: 7rem;
   margin: 1rem auto 0;
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.484);
+  background-color: rgba(0, 0, 0, 0.8);
+  /* background-color: whitesmoke;
+  background-color: #3f456d; */
   color: whitesmoke;
+  /* color: #000000; */
   font-weight: bold;
 }
 
 
 /*************querys*************/
 /********************************/
+.contenedor{
+  min-height: 50vh;
+}
 @media(min-width:576px) {
   .title {
     font-size: 80px;
@@ -733,11 +799,11 @@ img {
 
   /*************Jumbotron**********************/
   /******************************************/
+  
 
   .jumbotron .contenedor {
     max-width: 80%;
-    /* margin-top: 7rem; */
-    padding-top: 5rem;
+    
 
   }
 
@@ -747,9 +813,6 @@ img {
   }
 
   .social-media_item {
-
-    /* padding: 1rem; */
-    /* margin: .5rem; */
     font-size: 1.5rem;
   }
 
@@ -761,7 +824,7 @@ img {
   /*************End Jumbotron**********************/
   /******************************************/
   .about-me_text {
-    width: 75%;
+    width: 60%;
 
   }
 
@@ -778,6 +841,9 @@ img {
 }
 
 @media(min-width:768px) {
+  /* .contenedor{
+    min-height: 75vh;
+  } */
 
   /*************Nav**********************/
   /******************************************/
@@ -802,9 +868,7 @@ img {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* position: relative; */
-    /* height: 100%; */
-
+    
   }
 
   .menu-item {
@@ -823,19 +887,10 @@ img {
   /******************************************/
   /*************Jumbotron**********************/
   /******************************************/
-  .jumbotron .contenedor {
-    padding-top: 12rem;
-  }
-
-  .jumbotron .contenedor>.row {
-    min-width: 45vh;
-    min-height: 45vh;
-    align-items: stretch;
-  }
-
   .jumbotron_section-left {
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
   }
 
   .jumbotron_section-right {
@@ -844,8 +899,6 @@ img {
     justify-content: flex-start;
     align-items: center;
   }
-
-
 
   /*************End Jumbotron**********************/
   /******************************************/
@@ -858,13 +911,11 @@ img {
   }
 
   .proyects-item .card svg {
-    /* height:2rem; */
     max-width: 100%;
 
   }
 
   .proyects-item .card-body {
-    /* max-height: */
   }
 
   /*************End Proyects**********************/
@@ -921,6 +972,10 @@ img {
 
   }
 
+  .contenedor{
+    min-height: 75vh;
+  }
+
   /************Header*****************/
   /************************************/
   .menu-item {
@@ -931,12 +986,6 @@ img {
   /************************************/
   /************Jumbotron*****************/
   /************************************/
-  .jumbotron .contenedor>.row {
-
-    min-width: 50vh;
-    min-height: 50vh;
-  }
-
   .jumbotron-circle {
     width: 50vh;
     height: 50vh;
