@@ -20,10 +20,10 @@ window.addEventListener("scroll", (e) => {
 
 
     mainHeader.classList.add("nav-effect");
-    setTimeout(()=>{
-      mainHeader.classList.remove("nav-effect")
+    // setTimeout(()=>{
+    //   mainHeader.classList.remove("nav-effect")
 
-    },3000)
+    // },3000)
 
   }
     
@@ -64,12 +64,12 @@ const callbackSections = (entries) => {
         let optionName = option.firstElementChild.href;
         optionName = optionName.slice(optionName.indexOf("#") + 1);
 
-        option.firstElementChild.classList.remove("color-aqua", "zoom-text");
-        option.firstElementChild.classList.add("color-white");
+        option.firstElementChild.classList.remove("color-orange", "zoom-text");
+        option.firstElementChild.classList.add("color-black");
 
         if (sectionName == optionName) {
-          option.firstElementChild.classList.remove("color-white");
-          option.firstElementChild.classList.add("color-aqua", "zoom-text");
+          option.firstElementChild.classList.remove("color-black");
+          option.firstElementChild.classList.add("color-orange", "zoom-text");
         }
       });
     }
