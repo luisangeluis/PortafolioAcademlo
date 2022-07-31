@@ -25,7 +25,7 @@ a {
 body {
   /* overflow-x: hidden; */
   background-color: #ffffff;
-  background-image:url(https://www.toptal.com/designers/subtlepatterns/uploads/45degreee_fabric.png) linear-gradient(to right,red, blue);
+  background-image:url(https://www.toptal.com/designers/subtlepatterns/uploads/45degreee_fabric.png), linear-gradient(to right,red, blue);
 }
 
 .contenedor {
