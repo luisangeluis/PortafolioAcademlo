@@ -969,7 +969,7 @@ img {
 
   .contact-item .card {
     max-width: 75%;
-    word-break: keep-all;
+    /* word-break: keep-all; */
   }
 
   /*************EndContact me**********************/
