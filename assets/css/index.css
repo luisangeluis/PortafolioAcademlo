@@ -25,6 +25,7 @@ a {
 body {
   background-color: #ffffff;
   background-image:url(https://www.toptal.com/designers/subtlepatterns/uploads/45degreee_fabric.png);
+  background-attachment: fixed;
 }
 
 .contenedor {
