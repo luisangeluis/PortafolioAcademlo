@@ -20,6 +20,7 @@ li {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 body {
@@ -100,6 +101,13 @@ img {
   background-color: #ffffff;
 }
 
+.color-gray{
+  color: gray;
+}
+
+.color-sequelize{
+  color: #02AFEF;
+}
 .text-center {
   text-align: center;
 }
@@ -114,6 +122,13 @@ img {
 
 .d-flex {
   display: flex;
+}
+
+.justify-content-center{
+  justify-content: center;
+}
+.align-items-center{
+  align-items: center;
 }
 
 .max-height-0 {
