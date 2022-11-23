@@ -24,15 +24,16 @@ a {
 
 body {
   background-color: #ffffff;
-  background-image:url(https://www.toptal.com/designers/subtlepatterns/uploads/45degreee_fabric.png);
+  /* background-image:url(https://www.toptal.com/designers/subtlepatterns/uploads/45degreee_fabric.png); */
   background-attachment: fixed;
+  background-color: #000;
 }
 
 .contenedor {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  min-height: 25vh;
+  min-height: 100vh;
 }
 
 img {
@@ -54,6 +55,7 @@ img {
 
 .bg-black {
   background-color: #423f40;
+  background-color: #00000050;
 }
 
 .color-black {
@@ -574,21 +576,50 @@ img {
   transition: all 400ms;
 
 }
+.burbujas{
+  min-height: 100vh;
 
+  position:fixed;
+  background-color: lightblue;
+  z-index: 2;
+  left: 15%;
+
+}
 .burbuja {
-  background-color: #fff;
+  background-color: #ffffff99;
   opacity: 0;
   position: absolute;
-  bottom: -150;
-  left: 15%;
+  bottom: -150px;
+  /* right: 15%; */
   border-radius: 50%;
+  border-color: #FFF;
+  border-width: 1px;
   animation: burbujas 3s linear infinite;
+  box-shadow: 0px 0px 8.5px 5px #ffffff99;
+
 }
+
+/* .burbuja::before{
+  content: '';
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top:40%;
+  left:40%;
+  right: 0;
+  bottom: 0;
+  width: 10%;
+  height: 10%;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0px 0px 1px 1px #ffffff99;
+} */
 
 .burbuja:nth-child(1) {
   width: 5rem;
   height: 5rem;
-  left: 5%;
+  right: 5%;
   animation-duration: 11s;
   animation-delay: 1.5s;
 }
@@ -679,12 +710,21 @@ img {
 
 /*************Proyects*************/
 /**********************************/
+.proyects{
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
 .proyects .contenedor {
-  width: 75%;
   margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 1rem;
-  /* background-color: #f9f5f2; */
   border-radius: 10px;
+  /* height: 75vh; */
+  
 }
 
 .proyects-main {
@@ -773,7 +813,10 @@ img {
   max-width: 75%;
   margin: 1rem auto;
   padding: 1rem;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .tecnologies-list {
@@ -832,10 +875,16 @@ img {
   margin: 1rem auto;
   padding: 1rem;
   border-radius: 10px;
+  /* display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  flex-direction: column; */
+  min-height: 50vh;
+
 }
 
 .contact .contenedor .row {
-  min-height: inherit;
+  min-height: 50vh;
 }
 
 .contact-item {
@@ -900,9 +949,7 @@ img {
 
 /*************querys*************/
 /********************************/
-.contenedor {
-  min-height: 50vh;
-}
+
 
 @media(min-width:576px) {
   .title {
@@ -1113,7 +1160,6 @@ img {
   }
 
   .contenedor {
-    min-height: 75vh;
   }
 
   /************Header*****************/
@@ -1154,6 +1200,6 @@ img {
   /************************************/
 
   .contact .contenedor {
-    min-height: 50vh;
+    /* min-height: 50vh; */
   }
 }
