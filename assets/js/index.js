@@ -51,7 +51,7 @@ mainSections = Array.from(mainSections);
 options = {
   root: null,
   // rootMargin: "-50% 0%",
-  threshold: .85
+  threshold: .80
 
 };
 
@@ -65,7 +65,7 @@ const callbackSections = (entries) => {
         optionName = optionName.slice(optionName.indexOf("#") + 1);
 
         option.firstElementChild.classList.remove("color-orange", "zoom-text");
-        option.firstElementChild.classList.add("color-black");
+        option.firstElementChild.classList.add("color-white");
 
         if (sectionName == optionName) {
           option.firstElementChild.classList.remove("color-black");

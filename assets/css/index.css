@@ -94,6 +94,11 @@ img {
 
 .bg-green {
   background-color: #197f5b;
+  background-color: #153f59;
+
+}
+.bg-blue {
+  background-color: #0058ac;
 }
 
 .color-green {
@@ -461,7 +466,7 @@ img {
   /* border-top-right-radius:5%; */
   overflow: hidden;
   /* background-color: #197f5b; */
-  background-image: linear-gradient(to top, #197f5b90, #197f5b);
+  background-image: linear-gradient(to top, #153f5990, #153f59);
 
 }
 
@@ -528,7 +533,7 @@ img {
   border: solid 1px whitesmoke;
   box-shadow: 0 0 3px 1px white inset;
   max-height: 100%;
-  background-image: url(../images/mifotoremovebg.webp), linear-gradient(to left, #373B44, #73C8A9);
+  background-image: url(../images/mifotoremovebg.webp), linear-gradient(to right, #373B44, #153f59);
 
   /* background: #73C8A9; */
   /* fallback for old browsers */
@@ -574,7 +579,7 @@ img {
 
 .social-media_item {
   background-color: #ffffff;
-  color: #197f5b;
+  color: #153f59;
   margin: .1rem;
   padding: .5rem;
   border-radius: 50%;
@@ -594,12 +599,10 @@ img {
 }
 .burbujas{
   min-height: 100vh;
-
   position:fixed;
   background-color: lightblue;
   z-index: 2;
   left: 15%;
-
 }
 .burbuja {
   background-color: #ffffff99;
@@ -720,7 +723,7 @@ img {
   width: 100%;
   padding: 1rem;
   /* font-weight: bold; */
-  border-left: solid 5px #197f5b;
+  border-left: solid 5px #153f59;
 
 }
 
@@ -760,7 +763,7 @@ img {
 
 .proyects_link {
   color: #ffffff;
-  background-color: #197f5b;
+  background-color: #153f59;
   padding: .3rem;
   border-radius: 5px;
   display: inline-block;
@@ -861,14 +864,14 @@ img {
   transition: all 300ms ease-in-out;
   box-shadow: .3px .3px 3px 2px white;
   /* opacity: .95; */
-  box-shadow: 1px 1px 3px 1px #197f5b;
+  box-shadow: 1px 1px 5px 1px #153f5990;
 }
 
 .tecnologies-list i:hover {
   transition: all 300ms ease-in-out;
   transform: scale(1.02);
   -webkit-transform: scale(1.02);
-  box-shadow: 1px 1px 1px 1px #197f5b;
+  box-shadow: 1px 1px 1px 1px #153f5950;
 
   opacity: 1;
 
@@ -960,7 +963,9 @@ img {
   color: whitesmoke;
   /* color: #000000; */
   font-weight: bold;
+  background-color: #0f0f0f;
 }
+
 
 
 /*************querys*************/
