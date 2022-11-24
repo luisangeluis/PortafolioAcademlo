@@ -28,7 +28,7 @@ body {
   background-color: #ffffff;
   /* background-image:url(https://www.toptal.com/designers/subtlepatterns/uploads/45degreee_fabric.png); */
   background-attachment: fixed;
-  background-color: #000;
+  background-color: #000000;
 }
 
 .contenedor {
@@ -365,25 +365,26 @@ img {
 .main-header .contenedor {
   min-height: 5rem;
   padding: .5rem .5rem;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1;
   border-radius: 10px;
-  /* background-color: #24263599;
-  border: solid 1px silver; */
   transition: box-shadow 500ms;
-  box-shadow: .3px .3px 3px 1px #ffffff;
+  box-shadow: .3px .3px 1px 1.5px #153f59;
+  background-color: #365b7799;
+  transition: background-color ease 750ms;
 
 }
 
 .main-header .contenedor:hover {
-  box-shadow: .1px .1px 10px 2px #423f40;
-  /* background-color: #24263599; */
-  /* border: solid 1px silver; */
-
+  box-shadow: .1px .1px 2px 2px #423f40;
+ 
 }
 
 .main-nav {
@@ -395,10 +396,15 @@ img {
 
 .main-menu {
   color: #ffffff;
+  
 }
 
 .show-menu {
   max-height: 100vh;
+}
+
+.show-menu .main-menu{
+  padding: .3rem;
 }
 
 .menu-item {
@@ -438,16 +444,15 @@ img {
 }
 
 .contenedor.nav-effect {
-  /* box-shadow: .1px .1px 10px 5px #71748d;
-  background-color: #24263599;
-  border: solid 1px silver;
-  transition: box-shadow 500ms; */
-
-  box-shadow: .1px .1px 10px 2px #423f40;
-
+  box-shadow: .1px .1px .5px 1px #423f40;
+  
 
 }
 
+.contenedor.bg-transparent{
+  background-color: transparent;
+  /* background-color: red; */
+}
 /*************Jumbotron***************/
 /*************************************/
 .jumbotron {
@@ -704,6 +709,9 @@ img {
 
 /*************About me****************/
 /*************************************/
+.about-me{
+
+}
 .about-me .contenedor {
   display: flex;
   flex-direction: column;
@@ -733,9 +741,13 @@ img {
   /* display: flex;
   justify-content: center;
   align-items: center; */
+  border-bottom-left-radius:8%;
+  background-image: linear-gradient(to top, #153f5990, #153f59);
+
+
 }
 .proyects .contenedor {
-  margin: 1rem auto;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -830,7 +842,7 @@ img {
 /******************************************/
 .tecnologies .contenedor {
   max-width: 75%;
-  margin: 1rem auto;
+  margin: auto;
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -890,8 +902,13 @@ img {
 /******************************************/
 /*************Contact**********************/
 /******************************************/
+.contact{
+  border-bottom-left-radius:8%;
+  background-image: linear-gradient(to top, #153f5990, #153f59);
+
+}
 .contact .contenedor {
-  margin: 1rem auto;
+  margin: auto;
   padding: 1rem;
   border-radius: 10px;
   /* display: flex;
@@ -957,7 +974,7 @@ img {
   text-align: center;
   width: 100%;
   min-height: 7rem;
-  margin: 1rem auto 0;
+  margin: auto;
   padding: 1rem;
 
   color: whitesmoke;
@@ -1060,6 +1077,7 @@ img {
     justify-content: flex-end;
     align-items: center;
     width: 95%;
+    margin: 0 auto;
   }
 
   .main-nav {

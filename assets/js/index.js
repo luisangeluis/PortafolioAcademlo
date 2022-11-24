@@ -1,39 +1,41 @@
+let width =window.innerWidth;
+
 //Boton menu
 const btnMenu = document.querySelector(".btn-nav");
 const mainNav = document.querySelector(".main-nav");
 
 btnMenu.addEventListener("click", (e) => {
   mainNav.classList.toggle("show-menu");
-  // mainHeader.classList.add('bg-gray')
 });
 
 //Animacion nav al hacer scroll
 //****************************
 const mainHeader = document.querySelector(".main-header .contenedor");
+
 window.addEventListener("scroll", (e) => {
-  // console.log(e);
-  let valorScrollTop = this.scrollY;
-  // console.log(valorScrollTop);
-  if(valorScrollTop < 1){
-    mainHeader.classList.remove("nav-effect")
-  }else{
+  // let valorScrollTop = this.scrollY;
 
+  // if(valorScrollTop < 1){
+  //   mainHeader.classList.remove("nav-effect");
 
-    mainHeader.classList.add("nav-effect");
-    // setTimeout(()=>{
-    //   mainHeader.classList.remove("nav-effect")
+  // }else{
+  //   mainHeader.classList.add("nav-effect");
+  
+  // }
+  mainHeader.classList.add('bg-transparent');
 
-    // },3000)
+  setTimeout(() => {
+    mainHeader.classList.remove('bg-transparent');
 
-  }
-    
+  }, (1300));
 });
 
 //Animacion opciones de nav
 //****************************
+console.log({width});
 
 addEventListener("resize", () => {
-  let width = window.innerWidth;
+  width = window.innerWidth;
   if (width >= 768) {
     mainNav.classList.remove("show-menu");
   }
@@ -41,27 +43,53 @@ addEventListener("resize", () => {
 
 const mainMenuOptions = document.querySelectorAll(".main-menu .menu-item");
 
-// console.log(mainMenuOptions);
-
 let mainSections = document.querySelector("main").children;
+
 mainSections = Array.from(mainSections);
 
-// console.log(typeof mainSections);
+let options = {}
+addEventListener('resize',()=>{
+  width = window.innerWidth;
+  console.log({width});
 
-options = {
-  root: null,
-  // rootMargin: "-50% 0%",
-  threshold: .80
+  if(width<768){
+    options = {
+      root: null,
+      threshold: .25
+    
+    };
+  }else{
+    options = {
+      root: null,
+      threshold: .80
+    
+    };
+  }
+})
 
-};
+if(width<768){
+  options = {
+    root: null,
+    threshold: .25
+  
+  };
+}else{
+  options = {
+    root: null,
+    threshold: .80
+  
+  };
+}
+
 
 const callbackSections = (entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
       let sectionName = entry.target.id;
-      // console.log(entry.target);
+
       mainMenuOptions.forEach((option, i) => {
         let optionName = option.firstElementChild.href;
+
         optionName = optionName.slice(optionName.indexOf("#") + 1);
 
         option.firstElementChild.classList.remove("color-orange", "zoom-text");
@@ -108,7 +136,6 @@ const setAnimation = (elementsToAnimate, animationClass, rootMargin) => {
   elements.forEach(element=>observerElements.observe(element))
 }
 
-let width =window.innerWidth;
 
 if(width<992){
   setAnimation('.element-from-up','from-up-animation','-10%')
@@ -125,28 +152,13 @@ else{
   setAnimation('.element-from-grow','from-grow-animation','-50% 0%')
 
 }
-window.addEventListener('resize',()=>{
-  // width =window.innerWidth
-
-  // if(width<992){
-  //   setAnimation('.element-from-up','from-up-animation','-10%')
-  //   setAnimation('.element-from-left','from-left-animation','-10%')
-  //   setAnimation('.element-from-right','from-right-animation','-10%')
-
-  // }else{
-  //   setAnimation('.element-from-up','from-up-animation','-50% 0%')
-  //   setAnimation('.element-from-left','from-left-animation','-50% 0%')
-  //   setAnimation('.element-from-right','from-right-animation','-50% 0%')
-
-  // }
-})
-
 let highOfPage =window.scrollY;
 resetAnimations('element-from-up','from-up-animation',highOfPage);
 
 window.addEventListener('scroll',()=>{
   highOfPage =window.scrollY;
   resetAnimations('element-from-up','from-up-animation',highOfPage)
+
 
 })
 
