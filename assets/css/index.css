@@ -249,12 +249,12 @@ img {
 /*************Animations**************/
 /*************************************/
 .element-from-left {
-  opacity: 0;
+  /* opacity: 0; */
   transition: translateX 1s ease-in-out;
 }
 
 .element-from-right {
-  opacity: 0;
+  /* opacity: 0; */
   transition: translateX 1s ease-in-out;
 }
 
@@ -284,8 +284,9 @@ img {
 }
 
 .from-grow-animation {
-  animation: grow 1.5;
+  animation: grow 1s;
   opacity: 1;
+  /* animation-delay: 1s; */
 
 }
 
@@ -342,11 +343,6 @@ img {
     transform: scale(.5);
 
   }
-
-  50% {
-    transform: scale(.7);
-  }
-
   100% {
     transform: scale(1);
   }
@@ -908,7 +904,7 @@ img {
 
 }
 .contact .contenedor {
-  margin: auto;
+  margin: 1.5rem auto;
   padding: 1rem;
   border-radius: 10px;
   /* display: flex;
