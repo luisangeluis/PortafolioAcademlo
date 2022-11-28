@@ -44,6 +44,7 @@ window.addEventListener('resize',()=>{
 
 //**************************************Animaciones varias
 let highOfPage = window.scrollY;
+console.log(window.scrollY);
 
 setAnimation('.jumbotron-circle', 'from-grow-animation', { root: null, rootMargin: '0%' });
 setAnimation('.element-from-grow', 'from-grow-animation', { root: null, rootMargin: '0%' });
@@ -55,7 +56,12 @@ resetAnimations('element-from-up', 'from-up-animation', highOfPage);
 
 window.addEventListener('scroll', () => {
   highOfPage = window.scrollY;
-  resetAnimations('element-from-up', 'from-up-animation', highOfPage)
+  // resetAnimations('element-from-up', 'from-up-animation', highOfPage)
+  resetAnimations('element-from-left', 'from-left-animation', highOfPage)
+  resetAnimations('jumbotron-circle', 'from-grow-animation', highOfPage)
+
+  resetAnimations('element-from-right', 'from-right-animation', highOfPage)
+  resetAnimations('element-from-grow', 'from-grow-animation', highOfPage)
 })
 
 
