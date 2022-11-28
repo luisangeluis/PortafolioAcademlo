@@ -29,6 +29,7 @@ body {
   /* background-image:url(https://www.toptal.com/designers/subtlepatterns/uploads/45degreee_fabric.png); */
   background-attachment: fixed;
   background-color: #000000;
+  
 }
 
 .contenedor {
@@ -249,27 +250,25 @@ img {
 /*************Animations**************/
 /*************************************/
 .element-from-left {
-  /* opacity: 0; */
-  transition: translateX 1s ease-in-out;
+  transition: translateX 2s ease-in-out;
 }
 
 .element-from-right {
-  /* opacity: 0; */
-  transition: translateX 1s ease-in-out;
+  transition: translateX 2s ease-in-out;
 }
 
 .element-from-up {
-  opacity: 0;
   transition: translateX 1s;
 }
 
 .element-from-grow {
+  transition: grow 2s;
   opacity: 0;
-  transition: all 2s;
+  
 }
 
 .from-left-animation {
-  animation: fromLeftAnimation 1.5s;
+  animation: fromLeftAnimation 2s;
   opacity: 1;
 }
 
@@ -284,15 +283,14 @@ img {
 }
 
 .from-grow-animation {
-  animation: grow 1s;
+  animation: grow 2s;
   opacity: 1;
-  /* animation-delay: 1s; */
 
 }
 
 @keyframes fromLeftAnimation {
   0% {
-    transform: translateX(-150px);
+    transform: translateX(-50px);
   }
 
   50% {
@@ -311,10 +309,10 @@ img {
     transform: translateX(150px);
   }
 
-  50% {
-    transform: translateX(-25px);
+  /* 50% {
+    transform: translateX(25px);
 
-  }
+  } */
 
   100% {
     transform: translateX(0);
@@ -340,7 +338,7 @@ img {
 
 @keyframes grow {
   0% {
-    transform: scale(.5);
+    transform: scale(.1);
 
   }
   100% {
@@ -844,6 +842,7 @@ img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
 }
 
 .tecnologies-list {
