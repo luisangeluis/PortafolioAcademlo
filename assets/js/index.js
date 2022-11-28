@@ -1,15 +1,18 @@
-let width = window.innerWidth;
+import { setAnimation, resetAnimations } from './animations.js';
+import {setMenuObserver} from './mainMenuObserver.js';
 
-//Boton menu
 const btnMenu = document.querySelector(".btn-nav");
 const mainNav = document.querySelector(".main-nav");
+let width = window.innerWidth;
+console.log({ width });
 
+//****************************************Abrir y cerrar menu principal
 btnMenu.addEventListener("click", (e) => {
   mainNav.classList.toggle("show-menu");
 });
 
-//Animacion nav al hacer scroll
-//****************************
+//
+//******************************************Hacer transparente el menu al hacer scroll
 const mainHeader = document.querySelector(".main-header .contenedor");
 
 window.addEventListener("scroll", (e) => {
@@ -21,8 +24,8 @@ window.addEventListener("scroll", (e) => {
   }, (1300));
 });
 
-//Animacion opciones de nav
-//****************************
+
+//******************************************Cerrar el panel del menu cuando la pantalla se hace grande
 console.log({ width });
 
 addEventListener("resize", () => {
@@ -32,107 +35,34 @@ addEventListener("resize", () => {
   }
 });
 
-const mainMenuOptions = document.querySelectorAll(".main-menu .menu-item");
+//******************************************Animaciones al observar las secciones principales
+setMenuObserver();
+window.addEventListener('resize',()=>{
+  setMenuObserver();
 
-let mainSections = document.querySelector("main").children;
+})
 
-mainSections = Array.from(mainSections);
-
-let options = {
-  root: null,
-  threshold: .25
-
-};
-
-const callbackSections = (entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      let sectionName = entry.target.id;
-
-      mainMenuOptions.forEach((option, i) => {
-        let optionName = option.firstElementChild.href;
-
-        optionName = optionName.slice(optionName.indexOf("#") + 1);
-
-        option.firstElementChild.classList.remove("color-orange", "zoom-text");
-        option.firstElementChild.classList.add("color-white");
-
-        if (sectionName == optionName) {
-          option.firstElementChild.classList.remove("color-black");
-          option.firstElementChild.classList.add("color-orange", "zoom-text");
-        }
-      });
-    }
-  });
-};
-
-const observerSections = new IntersectionObserver(callbackSections, options);
-
-mainSections.forEach((section) => {
-  observerSections.observe(section);
-});
-
-// Animations 
-// *****************/
-// *****************/
-const setAnimation = (elementsToAnimate, animationClass, rootMargin) => {
-
-  const elements = document.querySelectorAll(elementsToAnimate);
-
-  const options = {
-    root: null,
-    rootMargin,
-  };
-  const cbElements = (entries) => {
-    entries.forEach((entry) => {
-
-      if (entry.isIntersecting) {
-        entry.target.classList.add(animationClass)
-      }
-
-    });
-  };
-
-  const observerElements = new IntersectionObserver(cbElements, options);
-  elements.forEach(element => observerElements.observe(element))
-}
-
-
-if (width < 992) {
-  setAnimation('.element-from-up', 'from-up-animation', '-10%')
-  setAnimation('.element-from-left', 'from-left-animation', '-10%')
-  setAnimation('.element-from-right', 'from-right-animation', '-10%')
-  setAnimation('.element-from-grow', 'from-grow-animation', '-10%')
-
-
-}
-else {
-  setAnimation('.element-from-up', 'from-up-animation', '-50% 0%')
-  setAnimation('.element-from-left', 'from-left-animation', '-50% 0%')
-  setAnimation('.element-from-right', 'from-right-animation', '-50% 0%')
-  setAnimation('.element-from-grow', 'from-grow-animation', '-50% 0%')
-
-}
+//**************************************Animaciones varias
 let highOfPage = window.scrollY;
+console.log(window.scrollY);
+
+setAnimation('.jumbotron-circle', 'from-grow-animation', { root: null, rootMargin: '0%' });
+setAnimation('.element-from-grow', 'from-grow-animation', { root: null, rootMargin: '0%' });
+
+setAnimation('.element-from-left', 'from-left-animation', { root: null, rootMargin: '0%' });
+setAnimation('.element-from-right', 'from-right-animation', { root: null, rootMargin: '0%' });
+
 resetAnimations('element-from-up', 'from-up-animation', highOfPage);
 
 window.addEventListener('scroll', () => {
   highOfPage = window.scrollY;
-  resetAnimations('element-from-up', 'from-up-animation', highOfPage)
+  // resetAnimations('element-from-up', 'from-up-animation', highOfPage)
+  resetAnimations('element-from-left', 'from-left-animation', highOfPage)
+  resetAnimations('jumbotron-circle', 'from-grow-animation', highOfPage)
 
-
+  resetAnimations('element-from-right', 'from-right-animation', highOfPage)
+  resetAnimations('element-from-grow', 'from-grow-animation', highOfPage)
 })
 
-function resetAnimations(animatedElement, classToRemove, highOfPage) {
-  // let high =highOfPage;
 
-  const elements = document.querySelectorAll(`.${animatedElement}`)
-
-  if (highOfPage === 0) {
-    console.log(highOfPage);
-
-    elements.forEach(element => element.classList.remove(classToRemove));
-  }
-
-}
 
