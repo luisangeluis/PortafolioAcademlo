@@ -25,7 +25,7 @@ const setMenuObserver = () => {
     options = {
       root: null,
       threshold: .15,
-      rootMargin: '-15%'
+      rootMargin: '-15% 0%'
 
     };
   }

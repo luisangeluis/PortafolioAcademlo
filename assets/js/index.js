@@ -1,5 +1,6 @@
 import { setAnimation, resetAnimations } from './animations.js';
 import {setMenuObserver} from './mainMenuObserver.js';
+import { speedUpBubbles } from './speedUpBubbles.js';
 
 const btnMenu = document.querySelector(".btn-nav");
 const mainNav = document.querySelector(".main-nav");
@@ -63,6 +64,8 @@ window.addEventListener('scroll', () => {
   resetAnimations('element-from-right', 'from-right-animation', highOfPage)
   resetAnimations('element-from-grow', 'from-grow-animation', highOfPage)
 })
+
+speedUpBubbles();
 
 
 
