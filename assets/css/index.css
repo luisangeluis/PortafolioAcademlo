@@ -781,10 +781,6 @@ img {
   margin: auto;
   padding: 1rem;
   border-radius: 10px;
-  /* height: 20vh; */
-  /* height: 70vh; */
-
-  
 }
 
 .proyects-main {
@@ -828,7 +824,6 @@ img {
   transition: all 300ms ease-in-out;
   cursor: pointer;
   box-shadow: 1px 1px 10px 2px #423f40;
-  /* border: solid 1px #197f5b; */
   min-height: 370px;
 }
 
@@ -854,7 +849,12 @@ img {
 }
 
 .proyects-item .card .card-title {
-  padding: .1rem;
+  padding: .5rem;
+  background-color: #ffffff99;
+  color: #000000;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .proyects-item .card-body .card-text {
