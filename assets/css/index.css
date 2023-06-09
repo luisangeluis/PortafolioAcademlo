@@ -198,7 +198,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem .5rem;
+  padding:.8rem .5rem;
 }
 
 .card-image {
@@ -220,6 +220,20 @@ img {
 .card-text {
   color: #D1CECA;
   padding: .5rem;
+}
+
+.tecnologies-section{
+  margin: .2rem auto;
+  padding: .5rem 1rem;
+  color: #000000;
+  background-color: #ffffff99;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.tecnologies-section h3{
+  text-align: center;
+  color: #153f59;
 }
 
 .primary-shadow {
