@@ -391,18 +391,24 @@ img {
 
 .main-nav {
   padding: .5rem .1rem;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 700ms ease-in;
+  /* max-height: 0; */
+  /* overflow: hidden; */
+  /* transition: max-height 700ms ease-in; */
 }
 
 .main-menu {
   color: #ffffff;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 750ms ease-in-out;
+
   
 }
 
 .show-menu {
   max-height: 100vh;
+
 }
 
 .show-menu .main-menu{
@@ -420,7 +426,8 @@ img {
 .menu-item:hover {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
-  opacity: .7;
+  /* opacity: .7; */
+  text-shadow: 1px 1px 8px silver;
 
 }
 
@@ -1149,9 +1156,9 @@ img {
 
   .main-nav {
     padding: 0;
-    overflow: initial;
+    /* overflow: initial; */
 
-    min-height: 5rem;
+    /* min-height: 5rem; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1161,6 +1168,10 @@ img {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    overflow: initial;
+    min-height: 5rem;
+
 
   }
 

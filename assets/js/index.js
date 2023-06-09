@@ -4,12 +4,16 @@ import { speedUpBubbles } from './speedUpBubbles.js';
 
 const btnMenu = document.querySelector(".btn-nav");
 const mainNav = document.querySelector(".main-nav");
+const mainMenu = document.querySelector(".main-menu");
+
 let width = window.innerWidth;
+
 console.log({ width });
 
 //****************************************Abrir y cerrar menu principal
 btnMenu.addEventListener("click", (e) => {
-  mainNav.classList.toggle("show-menu");
+  
+  mainMenu.classList.toggle("show-menu");
 });
 
 //
