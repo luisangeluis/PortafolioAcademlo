@@ -1,5 +1,5 @@
 import { setAnimation, resetAnimations } from './animations.js';
-import {setMenuObserver} from './mainMenuObserver.js';
+import { setMenuObserver } from './mainMenuObserver.js';
 import { speedUpBubbles } from './speedUpBubbles.js';
 
 const btnMenu = document.querySelector(".btn-nav");
@@ -8,11 +8,9 @@ const mainMenu = document.querySelector(".main-menu");
 
 let width = window.innerWidth;
 
-console.log({ width });
-
 //****************************************Abrir y cerrar menu principal
 btnMenu.addEventListener("click", (e) => {
-  
+
   mainMenu.classList.toggle("show-menu");
 });
 
@@ -20,13 +18,15 @@ btnMenu.addEventListener("click", (e) => {
 //******************************************Hacer transparente el menu al hacer scroll
 const mainHeader = document.querySelector(".main-header .contenedor");
 
-window.addEventListener("scroll", (e) => {
+addEventListener("scroll", (e) => {
   mainHeader.classList.add('bg-transparent');
 
   setTimeout(() => {
     mainHeader.classList.remove('bg-transparent');
-
   }, (1300));
+
+  console.log("hola");
+
 });
 
 
@@ -42,7 +42,7 @@ addEventListener("resize", () => {
 
 //******************************************Animaciones al observar las secciones principales
 setMenuObserver();
-window.addEventListener('resize',()=>{
+window.addEventListener('resize', () => {
   setMenuObserver();
 
 })
