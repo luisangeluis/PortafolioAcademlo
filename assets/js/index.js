@@ -1,12 +1,12 @@
-import { setAnimation, resetAnimations } from './animations.js';
+import { setAnimation, resetAnimations, animatedHeader } from './animations.js';
 import { setMenuObserver } from './mainMenuObserver.js';
 import { speedUpBubbles } from './speedUpBubbles.js';
 
 const btnMenu = document.querySelector('.btn-nav');
 const mainNav = document.querySelector('.main-nav');
-const mainMenu = document.querySelector('.main-menu');
 const mainHeader = document.querySelector('.main-header');
 let width = window.innerWidth;
+let lastScrollTop = 0;
 
 (() => {
   console.log('hola');
@@ -21,16 +21,13 @@ btnMenu.addEventListener('click', (e) => {
 });
 
 //
-//******************************************Hacer transparente el menu al hacer scroll
 
 addEventListener('scroll', (e) => {
-  mainHeader.classList.add('bg-transparent');
+  const scrollTop = window.scrollY;
+  //Hide nav to scroll
+  animatedHeader(scrollTop, lastScrollTop, mainHeader);
 
-  setTimeout(() => {
-    mainHeader.classList.remove('bg-transparent');
-  }, 1300);
-
-  console.log('hola');
+  lastScrollTop = scrollTop;
 });
 
 //******************************************Cerrar el panel del menu cuando la pantalla se hace grande

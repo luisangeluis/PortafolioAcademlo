@@ -1,22 +1,18 @@
-const bubbles = Array.from(document.querySelectorAll('.burbuja')) 
-const speedUpBubbles=()=>{
-
-  window.addEventListener('scroll',()=>{
+const bubbles = Array.from(document.querySelectorAll('.burbuja'));
+const speedUpBubbles = () => {
+  window.addEventListener('scroll', () => {
     // console.log('hola');
     // console.log(bubbles.target)
-    console.log(bubbles[1]);
+    // console.log(bubbles[1]);
 
-    bubbles.forEach(bubble=>{
+    bubbles.forEach((bubble) => {
       bubble.classList.add('shadow');
-    }); 
-    setTimeout(()=>{
-      bubbles.forEach(bubble=>{
+    });
+    setTimeout(() => {
+      bubbles.forEach((bubble) => {
         bubble.classList.remove('shadow');
       });
-    },2000)
-     
-  })
-}
-export{
-  speedUpBubbles
-}
+    }, 2000);
+  });
+};
+export { speedUpBubbles };

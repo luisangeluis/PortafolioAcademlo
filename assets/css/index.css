@@ -42,6 +42,18 @@ img {
   height: 50%;
 }
 
+.height-0 {
+  height: 0;
+}
+
+.height-5 {
+  height: 5rem;
+}
+
+.height-auto {
+  height: auto;
+}
+
 .color-aqua {
   color: #34b0be;
 }
@@ -403,7 +415,7 @@ img {
 /*************Navegacion**************/
 /*************************************/
 .main-header {
-  height: 5rem;
+  min-height: 5rem;
   margin-left: 0;
   margin-right: 0;
   width: 100%;
@@ -413,7 +425,7 @@ img {
   right: 0;
   z-index: 2;
 
-  overflow: hidden;
+  transition: height 300ms ease;
 }
 
 .main-nav {
@@ -428,8 +440,9 @@ img {
   align-items: center;
   flex-direction: column;
   font-size: 2rem;
-  border: solid 1px red;
+  border: solid 3px red;
   height: inherit;
+  border-radius: 0.5rem;
 }
 
 .close-menu {
@@ -1117,6 +1130,7 @@ img {
   /*************Nav**********************/
   /******************************************/
   .main-header {
+    overflow: hidden;
   }
 
   .main-nav {
