@@ -403,7 +403,7 @@ img {
 /*************Navegacion**************/
 /*************************************/
 .main-header {
-  min-height: 5rem;
+  height: 5rem;
   margin-left: 0;
   margin-right: 0;
   width: 100%;
@@ -413,7 +413,7 @@ img {
   right: 0;
   z-index: 2;
 
-  /* padding: 1rem; */
+  overflow: hidden;
 }
 
 .main-nav {
@@ -1117,34 +1117,17 @@ img {
   /*************Nav**********************/
   /******************************************/
   .main-header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    /* width: 95%; */
-    margin: 0 auto;
-    /* box-shadow: .3px .3px 2px 1px #365b77; */
-  }
-
-  .main-header .contenedor:hover {
-    /* box-shadow: .3px .3px 4px 3px #ffffff50; */
   }
 
   .main-nav {
-    padding: 0;
-    /* overflow: initial; */
-
-    /* min-height: 5rem; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: inherit;
   }
 
   .main-menu {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    overflow: initial;
-    min-height: 5rem;
+    padding: 0.5rem;
+    justify-content: flex-end;
+    flex-direction: row;
+    font-size: 1.1rem;
   }
 
   .menu-item {

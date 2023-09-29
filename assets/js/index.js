@@ -6,11 +6,17 @@ const btnMenu = document.querySelector('.btn-nav');
 const mainNav = document.querySelector('.main-nav');
 const mainMenu = document.querySelector('.main-menu');
 const mainHeader = document.querySelector('.main-header');
-
 let width = window.innerWidth;
 
-//****************************************Abrir y cerrar menu principal
+(() => {
+  console.log('hola');
+  width > 768
+    ? mainNav.classList.remove('close-menu')
+    : mainNav.classList.add('close-menu');
+})();
+
 btnMenu.addEventListener('click', (e) => {
+  //****************************************Abrir y cerrar menu principal
   mainNav.classList.toggle('close-menu');
 });
 
@@ -33,7 +39,7 @@ console.log({ width });
 addEventListener('resize', () => {
   width = window.innerWidth;
   if (width >= 768) {
-    mainNav.classList.remove('show-menu');
+    mainNav.classList.remove('close-menu');
   }
 });
 
