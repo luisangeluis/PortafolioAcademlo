@@ -29,15 +29,15 @@ function resetAnimations(animatedElement, classToRemove, highOfPage) {
 }
 
 function animatedHeader(currentScrollTop, lastScrollTop, mainHeader) {
-  if (currentScrollTop > 100) {
+  if (currentScrollTop > 50) {
     if (currentScrollTop > lastScrollTop) {
-      console.log('bajando', { currentScrollTop });
+      // console.log('bajando', { currentScrollTop });
       // mainHeader.style.height = '0';
       mainHeader.classList.remove('height-5');
 
       mainHeader.classList.add('height-0');
     } else {
-      console.log('subiend', { currentScrollTop });
+      // console.log('subiend', { currentScrollTop });
       // mainHeader.style.height = '5rem';
       mainHeader.classList.remove('height-0');
 

@@ -25,21 +25,19 @@ a {
 
 body {
   background-color: #ffffff;
+  /* background-color: gray;   */
   /* background-image:url(https://www.toptal.com/designers/subtlepatterns/uploads/45degreee_fabric.png); */
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   /* background-color: #000000; */
 }
 
-.contenedor {
-  width: 97%;
-  /* margin-left: auto;
-  margin-right: auto; */
-  min-height: 100vh;
+main {
+  margin-top: 5rem;
 }
 
 img {
-  max-width: 75%;
-  height: 50%;
+  max-width: 100%;
+  /* height: 50%; */
 }
 
 .height-0 {
@@ -132,6 +130,11 @@ img {
 .bg-color-1 {
   background-color: #528279;
 }
+
+.bg-color-2 {
+  background-color: #72917f;
+}
+
 .color-1 {
   color: #528279;
 }
@@ -143,6 +146,7 @@ img {
 .bg-color-3 {
   background-color: #acb7a7;
 }
+
 .color-3 {
   color: #acb7a7;
 }
@@ -158,6 +162,7 @@ img {
 .bg-color-5 {
   background-color: #dfe0d9;
 }
+
 .color-5 {
   color: #dfe0d9;
 }
@@ -198,14 +203,13 @@ img {
 
 .title {
   font-weight: bolder;
-  font-size: 50px;
+  font-size: 3rem;
 }
 
 .subtitle {
   font-weight: bolder;
   font-size: 32px;
-  color: #ffffff;
-  padding: 0.5rem;
+  /* padding: 2rem; */
 }
 
 .small-subtitle {
@@ -415,7 +419,7 @@ img {
 /*************Navegacion**************/
 /*************************************/
 .main-header {
-  min-height: 5rem;
+  /* min-height: 5rem; */
   margin-left: 0;
   margin-right: 0;
   width: 100%;
@@ -424,13 +428,13 @@ img {
   left: 0;
   right: 0;
   z-index: 2;
+  transition: height 400ms ease-in-out;
 
-  transition: height 300ms ease;
 }
 
 .main-nav {
   overflow: hidden;
-  transition: height 750ms ease-out;
+  transition: height 400ms ease-in-out;
   height: 100vh;
 }
 
@@ -439,8 +443,8 @@ img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: .5rem;
   font-size: 2rem;
-  border: solid 3px red;
   height: inherit;
   border-radius: 0.5rem;
 }
@@ -495,7 +499,147 @@ img {
 
 /*************Jumbotron***************/
 /*************************************/
+
+@keyframes animate {
+  0%{
+    transform: scale(0) translateY(0) rotate(0);
+    opacity: 1;
+  }
+  100%{
+    transform: scale(1.3) translateY(-90px) rotate(360deg);
+    opacity:0;
+  }
+}
 .jumbotron {
+  position: relative;
+  z-index: -2;
+
+  overflow: hidden;
+  /* background: linear-gradient(90deg, rgba(2, 0, .6, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%); */
+  background: linear-gradient(90deg, #374544 0%, #4b5a58 35%, #5f6e6c 100%);
+
+  .circles {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .circle {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 50%;
+    /* border: solid 6px #f2644050; */
+    border: solid 4px silver;
+    box-shadow: 3px 7px 9px silver;
+    position: absolute;
+  }
+
+  .circle:nth-child(1){
+    top: 12%;
+    left: 42%;
+    animation: animate 10s linear infinite;
+  }
+
+  .circle:nth-child(2){
+    top: 13%;
+    left: 22%;
+    animation: animate 10s linear infinite;
+  }
+  .circle:nth-child(3){
+    top: 15%;
+    left: 75%;
+    animation: animate 10s linear infinite;
+  }
+  .circle:nth-child(4){
+    top: 28%;
+    left: 22%;
+    animation: animate 10s linear infinite;
+  }
+  .circle:nth-child(5){
+    top: 31%;
+    left: 55%;
+    animation: animate 10s linear infinite;
+  }
+  .circle:nth-child(6){
+    top: 27%;
+    left: 78%;
+    animation: animate 10s linear infinite;
+  }
+
+  .circle:nth-child(7){
+    top: 75%;
+    left: 26%;
+    animation: animate 10s linear infinite;
+  }
+  .circle:nth-child(8){
+    top: 79%;
+    left: 66%;
+    animation: animate 10s linear infinite;
+  }
+  .circle:nth-child(9){
+    top: 82%;
+    left: 88%;
+    animation: animate 10s linear infinite;
+  }
+
+  
+
+  .contenedor {
+    /* padding: .5rem; */
+    min-height: 80vh;
+
+    >.row {
+      min-height: inherit;
+      justify-content: stretch;
+      align-items: stretch;
+
+
+      >div {
+        display: flex;
+
+        flex-direction: column;
+        /* height: inherit; */
+      }
+
+      >div:nth-child(1) {
+        justify-content: center;
+        align-items: center;
+      }
+
+      >div:nth-child(2) {
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .portrait {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      height: 300px;
+      border-radius: 100%;
+      background-color: blue;
+      background-image: url("../archivos/foto-ready.png");
+      background-position: top;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: inherit;
+
+
+    }
+  }
+}
+
+/* .jumbotron {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -510,12 +654,10 @@ img {
   border-bottom-right-radius: 8%;
 
   overflow: hidden;
-  /* background-image: linear-gradient(to top, #153f5990, #153f59); */
 }
 
 .jumbotron .contenedor {
   padding-top: 5rem;
-  /* overflow: hidden; */
 }
 
 .jumbotron .contenedor > .row {
@@ -523,7 +665,6 @@ img {
   min-width: 100%;
   justify-content: space-between;
   position: relative;
-  /* z-index: 3; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -563,15 +704,6 @@ img {
   border: solid 1px whitesmoke;
   box-shadow: 0 0 3px 1px white inset;
   max-height: 100%;
-  /* background-image: url(../images/mifotoremovebg.webp), linear-gradient(to right, #373B44, #153f59); */
-
-  /* background: #73C8A9; */
-  /* fallback for old browsers */
-  /* background: -webkit-linear-gradient(to right, #373B44, #73C8A9); */
-  /* Chrome 10-25, Safari 5.1-6 */
-  /* background: linear-gradient(to right, #373B44, #73C8A9); */
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -603,7 +735,6 @@ img {
 }
 
 .social-media_item {
-  /* background-color: #ffffff; */
   color: #153f59;
   margin: 0.1rem;
   padding: 0.5rem;
@@ -618,7 +749,9 @@ img {
   box-shadow: 1px 1px 1px #ffffff;
   opacity: 0.9;
   transition: all 400ms;
-}
+} */
+
+/*Burbujas */
 
 .burbujas {
   min-height: 100vh;
@@ -760,11 +893,19 @@ img {
   }
 }
 
+/*End burbujas*/
+
+.bg-efect {
+  background-color: transparent;
+  position: relative;
+}
+
 /*************About me****************/
 /*************************************/
 .about-me {
   overflow: hidden;
   min-height: 102vh;
+  /* background-color: black; */
 }
 
 .about-me .contenedor {
@@ -1058,17 +1199,7 @@ img {
 /********************************/
 
 @media (min-width: 576px) {
-  .title {
-    font-size: 80px;
-  }
 
-  .subtitle {
-    font-size: 41px;
-  }
-
-  .small-subtitle {
-    font-size: 1rem;
-  }
 
   .subsection_title {
     font-size: 31px;
@@ -1077,9 +1208,6 @@ img {
   /*************Jumbotron**********************/
   /******************************************/
 
-  .jumbotron .contenedor {
-    /* max-width: 80%; */
-  }
 
   .jumbotron_section-left {
     order: 0;
@@ -1127,6 +1255,26 @@ img {
 }
 
 @media (min-width: 768px) {
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .subtitle {
+    font-size: 2.5rem;
+
+  }
+
+  .small-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .contenedor {
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
+  }
+
   /*************Nav**********************/
   /******************************************/
   .main-header {
@@ -1134,7 +1282,8 @@ img {
   }
 
   .main-nav {
-    height: inherit;
+    /* height: inherit; */
+    height: 100%;
   }
 
   .main-menu {
@@ -1142,6 +1291,8 @@ img {
     justify-content: flex-end;
     flex-direction: row;
     font-size: 1.1rem;
+
+    /* height: initial; */
   }
 
   .menu-item {
@@ -1157,7 +1308,28 @@ img {
   /******************************************/
   /*************Jumbotron**********************/
   /******************************************/
-  .jumbotron_section-left {
+  .jumbotron {
+    .contenedor {
+      /* padding: 1rem; */
+      /* height: inherit; */
+      min-height: 90vh;
+
+      >.row {
+        padding: 1rem;
+      }
+
+      .portrait {
+        width: 370px;
+        height: 370px;
+        position: relative;
+        z-index: -1;
+        right: 5rem;
+
+      }
+    }
+  }
+
+  /* .jumbotron_section-left {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -1168,7 +1340,7 @@ img {
     text-align: center;
     justify-content: flex-start;
     align-items: center;
-  }
+  } */
 
   /*************End Jumbotron**********************/
   /******************************************/
@@ -1221,23 +1393,21 @@ img {
 
 @media (min-width: 992px) {
   .title {
-    font-size: 125px;
+    font-size: 4rem;
   }
 
   .subtitle {
-    font-size: 50px;
+    font-size: 3rem;
   }
 
   .small-subtitle {
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
 
   .subsection_title {
     font-size: 45px;
   }
 
-  .contenedor {
-  }
 
   /************Header*****************/
   /************************************/
