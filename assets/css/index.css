@@ -102,7 +102,6 @@ img {
 }
 
 .bg-green {
-  background-color: #197f5b;
   background-color: #153f59;
 }
 
@@ -167,6 +166,10 @@ img {
   color: #dfe0d9;
 }
 
+.efect-shadow {
+  box-shadow: 1px 2px 12px 1px #f26040;
+}
+
 /*END NEW COLORS*/
 .text-center {
   text-align: center;
@@ -228,8 +231,13 @@ img {
 }
 
 .zoom-text {
-  font-size: 105%;
+  font-size: 101%;
   font-weight: bold;
+  box-shadow: 3px 4px 7px 1px #374544;
+  padding: 0.5rem;
+  background-color: #374544;
+  /* color: #ffffff; */
+  /* border: solid 1px black; */
 }
 
 .card {
@@ -419,7 +427,6 @@ img {
 /*************Navegacion**************/
 /*************************************/
 .main-header {
-  /* min-height: 5rem; */
   margin-left: 0;
   margin-right: 0;
   width: 100%;
@@ -429,7 +436,6 @@ img {
   right: 0;
   z-index: 2;
   transition: height 400ms ease-in-out;
-
 }
 
 .main-nav {
@@ -443,7 +449,7 @@ img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: .5rem;
+  padding: 0.5rem;
   font-size: 2rem;
   height: inherit;
   border-radius: 0.5rem;
@@ -469,8 +475,8 @@ img {
 }
 
 .menu-item a {
-  transition: font-size 0.1s ease;
-  display: block;
+  transition: all 400ms ease;
+  border-radius: 5px;
 }
 
 .btn-nav {
@@ -501,13 +507,13 @@ img {
 /*************************************/
 
 @keyframes animate {
-  0%{
+  0% {
     transform: scale(0) translateY(0) rotate(0);
-    opacity: 1;
+    opacity: 0.5;
   }
-  100%{
+  100% {
     transform: scale(1.3) translateY(-90px) rotate(360deg);
-    opacity:0;
+    opacity: 0;
   }
 }
 .jumbotron {
@@ -535,86 +541,82 @@ img {
     width: 40px;
     height: 40px;
     background-color: transparent;
-    border-radius: 50%;
-    /* border: solid 6px #f2644050; */
-    border: solid 4px silver;
-    box-shadow: 3px 7px 9px silver;
+    border-radius: 35%;
+    border: solid 2px #ffffff;
+    box-shadow: 3px 7px 20px 5px silver;
     position: absolute;
   }
 
-  .circle:nth-child(1){
+  .circle:nth-child(1) {
     top: 12%;
     left: 42%;
-    animation: animate 10s linear infinite;
+    animation: animate 20s linear infinite;
   }
 
-  .circle:nth-child(2){
+  .circle:nth-child(2) {
     top: 13%;
     left: 22%;
     animation: animate 10s linear infinite;
   }
-  .circle:nth-child(3){
+  .circle:nth-child(3) {
     top: 15%;
     left: 75%;
-    animation: animate 10s linear infinite;
+    animation: animate 20s linear infinite;
   }
-  .circle:nth-child(4){
+  .circle:nth-child(4) {
     top: 28%;
     left: 22%;
     animation: animate 10s linear infinite;
   }
-  .circle:nth-child(5){
+  .circle:nth-child(5) {
     top: 31%;
     left: 55%;
-    animation: animate 10s linear infinite;
+    animation: animate 20s linear infinite;
   }
-  .circle:nth-child(6){
+  .circle:nth-child(6) {
     top: 27%;
     left: 78%;
     animation: animate 10s linear infinite;
   }
 
-  .circle:nth-child(7){
+  .circle:nth-child(7) {
     top: 75%;
     left: 26%;
-    animation: animate 10s linear infinite;
+    animation: animate 20s linear infinite;
   }
-  .circle:nth-child(8){
+  .circle:nth-child(8) {
     top: 79%;
     left: 66%;
     animation: animate 10s linear infinite;
   }
-  .circle:nth-child(9){
+  .circle:nth-child(9) {
     top: 82%;
     left: 88%;
-    animation: animate 10s linear infinite;
+    animation: animate 20s linear infinite;
   }
-
-  
 
   .contenedor {
     /* padding: .5rem; */
     min-height: 80vh;
 
-    >.row {
+    > .row {
       min-height: inherit;
       justify-content: stretch;
       align-items: stretch;
 
-
-      >div {
+      > div {
         display: flex;
 
         flex-direction: column;
         /* height: inherit; */
       }
 
-      >div:nth-child(1) {
+      > div:nth-child(1) {
         justify-content: center;
         align-items: center;
       }
 
-      >div:nth-child(2) {
+      > div:nth-child(2) {
         justify-content: center;
         align-items: center;
       }
@@ -627,14 +629,11 @@ img {
       width: 300px;
       height: 300px;
       border-radius: 100%;
-      background-color: blue;
-      background-image: url("../archivos/foto-ready.png");
+      background-image: url('../archivos/foto-ready.png');
       background-position: top;
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: inherit;
-
-
     }
   }
 }
@@ -926,7 +925,7 @@ img {
   width: 100%;
   padding: 1rem;
   /* font-weight: bold; */
-  border-left: solid 5px #153f59;
+  border-left: solid 5px #f26440;
 }
 
 /*************Proyects*************/
@@ -1199,15 +1198,12 @@ img {
 /********************************/
 
 @media (min-width: 576px) {
-
-
   .subsection_title {
     font-size: 31px;
   }
 
   /*************Jumbotron**********************/
   /******************************************/
-
 
   .jumbotron_section-left {
     order: 0;
@@ -1261,7 +1257,6 @@ img {
 
   .subtitle {
     font-size: 2.5rem;
-
   }
 
   .small-subtitle {
@@ -1282,7 +1277,6 @@ img {
   }
 
   .main-nav {
-    /* height: inherit; */
     height: 100%;
   }
 
@@ -1291,8 +1285,6 @@ img {
     justify-content: flex-end;
     flex-direction: row;
     font-size: 1.1rem;
-
-    /* height: initial; */
   }
 
   .menu-item {
@@ -1314,7 +1306,7 @@ img {
       /* height: inherit; */
       min-height: 90vh;
 
-      >.row {
+      > .row {
         padding: 1rem;
       }
 
@@ -1324,7 +1316,6 @@ img {
         position: relative;
         z-index: -1;
         right: 5rem;
-
       }
     }
   }
@@ -1407,7 +1398,6 @@ img {
   .subsection_title {
     font-size: 45px;
   }
-
 
   /************Header*****************/
   /************************************/

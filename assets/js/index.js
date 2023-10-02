@@ -10,21 +10,22 @@ let lastScrollTop = 0;
 let scrollTop = window.scrollY;
 
 (() => {
-  mainHeader.classList.remove("height-0");
-  console.log('hola');
-  width > 768
-    ? mainNav.classList.remove('close-menu')
-    : mainNav.classList.add('close-menu');
+  // mainHeader.classList.remove("height-0");
+  // width > 768
+  //   ? mainNav.classList.remove('close-menu')
+  //   : mainNav.classList.add('close-menu');
 })();
 
 //****************************************Abrir y cerrar menu principal
-btnMenu.addEventListener('click', (e) => mainNav.classList.toggle('close-menu'));
+btnMenu.addEventListener('click', (e) =>
+  mainNav.classList.toggle('close-menu')
+);
 
 //
 addEventListener('scroll', (e) => {
   scrollTop = window.scrollY;
   //Hide nav to scroll
-  animatedHeader(scrollTop, lastScrollTop, mainHeader);
+  // animatedHeader(scrollTop, lastScrollTop, mainHeader);
 
   lastScrollTop = scrollTop;
 });
@@ -37,7 +38,9 @@ addEventListener('resize', () => {
   if (width >= 768) {
     mainNav.classList.remove('close-menu');
   }
-  width>=768 ?mainNav.classList.remove("close-menu") : mainNav.classList.add("close-menu") 
+  width >= 768
+    ? mainNav.classList.remove('close-menu')
+    : mainNav.classList.add('close-menu');
 });
 
 //******************************************Animaciones al observar las secciones principales
