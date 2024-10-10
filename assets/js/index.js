@@ -1,10 +1,20 @@
 import { setAnimation, resetAnimations } from './animations.js';
 import {setMenuObserver} from './mainMenuObserver.js';
+import { projects } from './projectsArray.js';
 import { speedUpBubbles } from './speedUpBubbles.js';
+import { renderProjects } from './UI/renderProjectCard.js';
 
 const btnMenu = document.querySelector(".btn-nav");
 const mainNav = document.querySelector(".main-nav");
 const mainMenu = document.querySelector(".main-menu");
+
+//Render projects;
+renderProjects(projects);
+
+
+
+
+
 
 let width = window.innerWidth;
 
