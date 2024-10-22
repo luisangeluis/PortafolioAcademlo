@@ -18,7 +18,7 @@ renderProjects(projects);
 
 let width = window.innerWidth;
 
-console.log({ width });
+// console.log({ width });
 
 //****************************************Abrir y cerrar menu principal
 btnMenu.addEventListener("click", (e) => {
@@ -41,7 +41,7 @@ window.addEventListener("scroll", (e) => {
 
 
 //******************************************Cerrar el panel del menu cuando la pantalla se hace grande
-console.log({ width });
+// console.log({ width });
 
 addEventListener("resize", () => {
   width = window.innerWidth;
@@ -59,7 +59,7 @@ window.addEventListener('resize',()=>{
 
 //**************************************Animaciones varias
 let highOfPage = window.scrollY;
-console.log(window.scrollY);
+// console.log(window.scrollY);
 
 setAnimation('.jumbotron-circle', 'from-grow-animation', { root: null, rootMargin: '0%' });
 setAnimation('.element-from-grow', 'from-grow-animation', { root: null, rootMargin: '0%' });

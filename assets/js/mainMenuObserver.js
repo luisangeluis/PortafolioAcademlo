@@ -6,7 +6,7 @@ menuItems = Array.from(menuItems)
 
 const setMenuObserver = () => {
   let width = window.innerWidth;
-  console.log({width});
+  // console.log({width});
   const cbSections = (entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
